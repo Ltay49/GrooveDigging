@@ -1,0 +1,104 @@
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+.slideshowContainer {
+    position: relative;
+    width: 100%;
+    /* max-width: 1200px; */
+    /* margin: 2rem auto; */
+    padding: 1rem;
+    /* background: #f6cdcd; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* border-radius: 1rem; */
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 1rem;
+  }
+  
+  .sideImage {
+    flex: 0 0 150px;
+    height: 300px;
+    position: relative;
+    opacity: 0.5;
+    transform: scale(0.9);
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  
+  .mainContent {
+    display: flex;
+    flex: 0 0 600px;
+    height: 300px;
+    gap: 1rem;
+    transition: transform 0.5s ease-in-out;
+  }
+  .mainContent:hover{
+    transform: scale(1.1);
+  }
+  .mainImage {
+    flex: 0 0 300px;
+    position: relative;
+    /* border-radius: 1rem; */
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+ 
+  }
+  /* .mainImage:hover{
+    transform: scale(1.1);
+  } */
+  
+  .textBox {
+    flex: 0 0 300px;
+    background: rgb(246, 246, 169);
+    padding: 1.5rem;
+    /* border-radius: 1rem; */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .image {
+    object-fit: cover;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 999px;
+  }
+  
+  .arrow:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .left {
+    left: 1rem;
+  }
+  
+  .right {
+    right: 1rem;
+  }
+  .hash{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    height:100px;
+    font-weight: bolder;
+  }
