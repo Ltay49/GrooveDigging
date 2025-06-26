@@ -7,6 +7,11 @@ import BannerSlide from "./components/BannerSlide";
 
 const title = "GROOVE DIGGING";
 const imageNamesR = ["two", "four"];
+const toSlug = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
 
 export default function Home() {
   return (
@@ -137,7 +142,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-       <BannerSlide />
+        <BannerSlide />
         <section>
           <div className={styles.subHeadingContainer}>
             <h1 className={styles.subheading}>
@@ -147,7 +152,9 @@ export default function Home() {
                 </span>
               ))}
             </h1>{" "}
-            <a className={styles.moreRecords}>see more</a>
+            <Link className={styles.moreRecords} href={`/records`} passHref>
+              see collection
+            </Link>
           </div>
           <Slideshow />
         </section>
