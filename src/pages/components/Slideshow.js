@@ -47,7 +47,7 @@ export default function Slideshow() {
             <p>Album: <strong>Galaxy</strong></p>
             <p>Condition: <strong>VG+</strong></p>
             <p>Price: <strong>£20.00</strong></p>
-            <p className={styles.hash}>#Funk #Disco #70s #Essential #Groovy #WAR #Galaxy</p>
+            <p className={styles.hash}>#Funk #Disco #70&apos;s #Essential #Groovy #WAR #Galaxy</p>
             <button>View More</button>
           </div>
         </div>

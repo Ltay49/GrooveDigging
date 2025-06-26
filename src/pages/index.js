@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Groove Digging | Vinyl Records, Music Blogs & Sharing</title>
+        <title>Groove Digging | Vinyl Records, Music Blogs &amp; Sharing</title>
         <meta
           name="description"
           content="Groove Digging is your destination for curated vinyl records, music blogs, and community sharing. Discover rare finds and underground favorites."
