@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Slideshow from "./components/Slideshow";
+import BannerSlide from "./components/BannerSlide";
 
 const title = "GROOVE DIGGING";
 const imageNamesR = ["two", "four"];
@@ -136,6 +137,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+       <BannerSlide />
         <section>
           <div className={styles.subHeadingContainer}>
             <h1 className={styles.subheading}>
@@ -145,15 +147,10 @@ export default function Home() {
                 </span>
               ))}
             </h1>{" "}
-            <span>-</span>
             <a className={styles.moreRecords}>see more</a>
           </div>
           <Slideshow />
         </section>
-        <p className={styles.description}>
-          Discover and buy vinyl records, read music blogs, and share your
-          favorite tunes with fellow audiophiles.
-        </p>
 
         <section className={styles.features}>
           <article className={styles.card}>
