@@ -1,7 +1,7 @@
 /* Home.module.css */
 
 .main {
-    max-width:100%;
+    max-width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
@@ -22,6 +22,48 @@
     letter-spacing: .3rem;
 }
 
+.subHeadingContainer {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    width: 100vw;
+    /* border: 2px solid #f6cdcd; */
+    margin: 0rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    padding: 0rem;
+    letter-spacing: .1rem;
+}
+
+.subheading {
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+    top: 2.5rem;
+    left: 1%;
+    padding: .1rem;
+    position: absolute;
+    cursor: none
+}
+
+.moreRecords {
+    left: 1%;
+    top: 6.5rem;
+    position: absolute;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.moreRecords:hover {
+    color: #0070f3;
+}
+
 .letter {
     color: #f6cdcd;
     display: inline-block;
@@ -30,6 +72,15 @@
     font-weight: bold;
     font-size: 3rem;
     /* Remove previous color if any */
+}
+
+.letterSubH {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin: 0 0.1em;
+    transform-origin: center;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 /* .letter:nth-child(3n + 1) {
@@ -45,77 +96,229 @@
   } */
 
 /* Static different rotations for each letter */
+.letterSubH:nth-child(1) {
+    transform: rotate(-10deg) translateX(-2px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(1) {
+    transform: rotate(10deg) translateX(2px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(2) {
+    transform: rotate(8deg) translateX(3px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(2) {
+    transform: rotate(-8deg) translateX(-3px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(3) {
+    transform: rotate(-6deg);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(3) {
+    transform: rotate(6deg);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(4) {
+    transform: rotate(12deg) translateX(2px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(4) {
+    transform: rotate(-12deg) translateX(-2px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(5) {
+    transform: rotate(-8deg) translateX(-3px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(5) {
+    transform: rotate(8deg) translateX(3px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(6) {
+    transform: rotate(6deg);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(6) {
+    transform: rotate(-6deg);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(7) {
+    transform: rotate(-12deg) translateX(-2px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(7) {
+    transform: rotate(12deg) translateX(2px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(8) {
+    transform: rotate(10deg) translateX(4px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(8) {
+    transform: rotate(-10deg) translateX(-4px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(9) {
+    transform: rotate(-7deg);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(9) {
+    transform: rotate(7deg);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(10) {
+    transform: rotate(9deg) translateX(3px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(10) {
+    transform: rotate(-9deg) translateX(-3px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(11) {
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(11) {
+    transform: rotate(5deg);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(12) {
+    transform: rotate(11deg) translateX(2px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(12) {
+    transform: rotate(-11deg) translateX(-2px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(13) {
+    transform: rotate(-9deg) translateX(-2px);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(13) {
+    transform: rotate(9deg) translateX(2px);
+    color: #da1414;
+  }
+  
+  .letterSubH:nth-child(14) {
+    transform: rotate(7deg);
+    transition: transform 0.3s ease;
+  }
+  .subHeadingContainer:hover .letterSubH:nth-child(14) {
+    transform: rotate(-7deg);
+    color: #da1414;
+  }
+  
+
 .letter:nth-child(1) {
     transform: rotate(-10deg) translateX(-2px);
- 
+
 }
+
 
 .letter:nth-child(2) {
     transform: rotate(8deg) translateX(3px);
 }
 
+
+
 .letter:nth-child(3) {
-  
+
     transform: rotate(-6deg);
 }
 
+
+
 .letter:nth-child(4) {
-  
+
     transform: rotate(12deg) translateX(2px);
 }
+
+
 
 .letter:nth-child(5) {
 
     transform: rotate(-8deg) translateX(-3px);
 }
 
+
+
 .letter:nth-child(6) {
     transform: rotate(6deg);
 }
+
+
 
 .letter:nth-child(7) {
     transform: rotate(-12deg) translateX(-2px);
 }
 
+
 .letter:nth-child(8) {
-   
+
     transform: rotate(10deg) translateX(4px);
 }
+
+
 
 .letter:nth-child(9) {
 
     transform: rotate(-7deg);
 }
 
+
+
 .letter:nth-child(10) {
- 
+
     transform: rotate(9deg) translateX(3px);
 }
 
+
+
 .letter:nth-child(11) {
- 
+
     transform: rotate(-5deg);
 }
+
+
 
 .letter:nth-child(12) {
     transform: rotate(11deg) translateX(2px);
 }
 
+
+
 .letter:nth-child(13) {
     transform: rotate(-9deg) translateX(-2px);
 }
 
+
+
 .letter:nth-child(14) {
- 
+
     transform: rotate(7deg);
 }
+
 
 
 /* Add more as needed, or letters beyond will have no rotation */
 
 .headerRow {
     width: 100vw;
-    background-color:black ;
+    background-color: black;
     padding: 1rem 1em;
     z-index: 10;
     flex-direction: row;
@@ -176,40 +379,49 @@
     text-decoration: none;
     font-weight: bold;
 }
+
 .imageGallery {
-    top:0rem;
+    top: 0rem;
     position: absolute;
     height: auto;
     width: 100vw;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;         /* prevent wrapping */
+    flex-wrap: nowrap;
+    /* prevent wrapping */
     justify-content: flex-start;
-    overflow-x: hidden;          /* scroll if too wide */
-    gap: 0rem;   
-    z-index: 0;             /* optional spacing between images */     
-  }
-  .imageGalleryR {
+    overflow-x: hidden;
+    /* scroll if too wide */
+    gap: 0rem;
+    z-index: 0;
+    /* optional spacing between images */
+}
+
+.imageGalleryR {
     height: auto;
     width: 100vw;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;         /* prevent wrapping */
+    flex-wrap: nowrap;
+    /* prevent wrapping */
     justify-content: flex-start;
-    overflow-x: hidden;          /* scroll if too wide */
-    gap: 1rem;   
-    z-index: 0;             /* optional spacing between images */     
-  }
-  
-  
-  .nav {
+    overflow-x: hidden;
+    /* scroll if too wide */
+    gap: 1rem;
+    z-index: 0;
+    /* optional spacing between images */
+}
+
+
+.nav {
     z-index: 10;
     width: 40vw;
     /* border: 1px solid wheat; */
-    margin-left: auto; /* Pushes nav to the right side */
-  }
-  
-  .navList {
+    margin-left: auto;
+    /* Pushes nav to the right side */
+}
+
+.navList {
     font-size: 1.8rem;
     justify-content: center;
     list-style: none;
@@ -217,49 +429,54 @@
     gap: 1rem;
     margin: 0;
     padding: 0;
-  }
-  
-  .navList li a {
+}
+
+.navList li a {
     text-decoration: none;
     font-weight: bold;
     color: #da1414;
     transition: color 0.3s ease;
-  }
-  
-  .navList li a:hover {
-    color: #0070f3; /* Change to a highlight color */
-  }
-  .banner {
+}
+
+.navList li a:hover {
+    color: #0070f3;
+    /* Change to a highlight color */
+}
+
+.banner {
     display: flex;
     flex-direction: row;
     width: 100vw;
     height: 400px;
     transform: rotate(180deg);
-  }
-  
-  .imageWrapper {
+}
+
+.imageWrapper {
     position: relative;
     width: 50vw;
     height: 450px;
-   z-index: 100;
-   will-change: auto;
-  }
-  
-  .bannerDiana {
+    z-index: 100;
+    will-change: auto;
+}
+
+.bannerDiana {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    overflow: visible;
-  }
-  .overlay {
+
+}
+
+.overlay {
     position: absolute;
     top: 0;
-    right:0;
-    transform: rotate(180deg); /* keep upright */
+    right: 0;
+    transform: rotate(180deg);
+    /* keep upright */
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* semi-transparent black overlay */
+    background: rgba(0, 0, 0, 0.5);
+    /* semi-transparent black overlay */
     color: white;
     display: flex;
     align-items: center;
@@ -267,37 +484,41 @@
     font-size: 2rem;
     font-weight: bold;
     pointer-events: none;
-    z-index: 101; 
-  }
-  .can{
+    z-index: 101;
+}
+
+.can {
     position: absolute;
     color: #da1414;
-    left:5rem;
-    top:6rem;
+    left: 5rem;
+    top: 6rem;
     transform: rotate(0deg);
     font-size: 4rem;
-  }
-  .you{
+}
+
+.you {
     position: absolute;
     color: white;
-    top:4.8rem;
-    left:5rem;
+    top: 4.8rem;
+    left: 5rem;
     transform: rotate(0deg);
     font-size: 4rem;
-  }
-  .dig{
+}
+
+.dig {
     position: absolute;
     color: yellow;
-    bottom:9rem;
-    left:5rem;
+    bottom: 9rem;
+    left: 5rem;
     transform: rotate(0deg);
     font-size: 4rem;
-  }
-  .it{
+}
+
+.it {
     position: absolute;
     color: yellow;
-    bottom:9rem;
-    left:13rem;
+    bottom: 9rem;
+    left: 13rem;
     transform: rotate(0deg);
     font-size: 4rem;
-  }
+}

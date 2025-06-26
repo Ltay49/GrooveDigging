@@ -5,9 +5,9 @@
     position: relative;
     width: 100%;
     /* max-width: 1200px; */
-    /* margin: 2rem auto; */
-    padding: 1rem;
-    /* background: #f6cdcd; */
+    margin: 4rem auto;
+    padding: 2rem;
+    background: none;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     /* border-radius: 1rem; */
@@ -38,9 +38,7 @@
     gap: 1rem;
     transition: transform 0.5s ease-in-out;
   }
-  .mainContent:hover{
-    transform: scale(1.1);
-  }
+
   .mainImage {
     flex: 0 0 300px;
     position: relative;
@@ -53,18 +51,59 @@
     transform: scale(1.1);
   } */
   
-  .textBox {
-    flex: 0 0 300px;
-    background: rgb(246, 246, 169);
-    padding: 1.5rem;
-    /* border-radius: 1rem; */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: space-between;
-    font-family: 'Space Grotesk', sans-serif;
-  }
+.textBox {
+  background-color: #1a1a1a;
+  color: #fff;
+    padding: 1.5rem; 
+  /* border-radius: 12px; */
+  box-shadow: 0 4px 12px rgba(227, 222, 222, 1);
+  max-width: 400px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1rem auto;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.textBox:hover {
+  transform: scale(1.02);
+}
+
+.recordInfo p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.recordInfo span {
+  color: #f6cdcd;
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.hash {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #da1414;
+  font-style: italic;
+  word-wrap: break-word;
+}
+
+.viewBtn {
+  margin-top: 1rem;
+  background-color: #da1414;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  /* border-radius: 6px; */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewBtn:hover {
+  background-color: #ff4747;
+}
+
   
   .image {
     object-fit: cover;
@@ -94,11 +133,4 @@
   
   .right {
     right: 1rem;
-  }
-  .hash{
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    height:100px;
-    font-weight: bolder;
   }

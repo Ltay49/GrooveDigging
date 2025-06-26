@@ -4,18 +4,64 @@ import styles from "../../styles/Slideshow.module.css";
 
 const images = ["/one.jpeg", "/two.jpeg", "/three.jpeg", "/four.jpeg"];
 
+const records = [
+  {
+    artist: "WAR",
+    album: "Galaxy",
+    condition: "VG+",
+    price: "£20.00",
+    tags: [
+      "#Funk",
+      "#Disco",
+      "#70's",
+      "#Essential",
+      "#Groovy",
+      "#WAR",
+      "#Galaxy",
+    ],
+  },
+  {
+    artist: "James Brown",
+    album: "The Payback",
+    condition: "VG",
+    price: "£18.00",
+    tags: ["#Funk", "#Soul", "#Classic", "#JamesBrown", "#ThePayback"],
+  },
+  {
+    artist: "Chic",
+    album: "Risqué",
+    condition: "NM",
+    price: "£25.00",
+    tags: ["#Disco", "#Chic", "#Dance", "#GoodTimes"],
+  },
+  {
+    artist: "Herbie Hancock",
+    album: "Head Hunters",
+    condition: "VG+",
+    price: "£22.50",
+    tags: ["#JazzFunk", "#Fusion", "#HerbieHancock", "#Headhunters"],
+  },
+];
+
 export default function Slideshow() {
-  const [index, setIndex] = useState(0);
 
-  const handlePrev = () => {
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const getImage = (offset = 0) => {
+    const i = (currentIndex + offset + images.length) % images.length;
+    return images[i];
   };
 
-  const handleNext = () => {
-    setIndex((prev) => (prev + 1) % images.length);
-  };
-  const getImage = (offset) =>
-    images[(index + offset + images.length) % images.length];
+  const currentRecord = records[currentIndex];
+
+const handlePrev = () => {
+  setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+};
+
+const handleNext = () => {
+  setCurrentIndex((prev) => (prev + 1) % images.length);
+};
 
   return (
     <div className={styles.slideshowContainer}>
@@ -42,13 +88,25 @@ export default function Slideshow() {
               className={styles.image}
             />
           </div>
+
           <div className={styles.textBox}>
-            <p>Artist: <strong>WAR</strong></p>
-            <p>Album: <strong>Galaxy</strong></p>
-            <p>Condition: <strong>VG+</strong></p>
-            <p>Price: <strong>£20.00</strong></p>
-            <p className={styles.hash}>#Funk #Disco #70&apos;s #Essential #Groovy #WAR #Galaxy</p>
-            <button>View More</button>
+            <div className={styles.recordInfo}>
+              <p>
+                <span>Artist:</span> <strong>{currentRecord.artist}</strong>
+              </p>
+              <p>
+                <span>Album:</span> <strong>{currentRecord.album}</strong>
+              </p>
+              <p>
+                <span>Condition:</span>{" "}
+                <strong>{currentRecord.condition}</strong>
+              </p>
+              <p>
+                <span>Price:</span> <strong>{currentRecord.price}</strong>
+              </p>
+            </div>
+            <p className={styles.hash}>{currentRecord.tags.join(" ")}</p>
+            <button className={styles.viewBtn}>View More</button>
           </div>
         </div>
 
@@ -65,4 +123,4 @@ export default function Slideshow() {
       </button>
     </div>
   );
-}
+  }
