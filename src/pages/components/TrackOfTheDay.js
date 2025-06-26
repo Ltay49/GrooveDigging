@@ -47,7 +47,7 @@ export default function TrackOfTheDay() {
   return (
     <section className={styles.trackContainer}>
       <h1 className={styles.subheading}>
-        {"Dig Of The Day".split("").map((char, i) => (
+        {"Dig Of The Week".split("").map((char, i) => (
           <span key={i} className={styles.letterSubH}>
             {char === " " ? "\u00A0" : char}
           </span>
@@ -55,13 +55,13 @@ export default function TrackOfTheDay() {
       </h1>{" "}
       <div className={styles.mainContent}>
         <article className={styles.textBox}>
-          <h3>Title {currentTrack.title}</h3>
-          <p>
-            <strong>Artist:</strong> {currentTrack.artist}
-          </p>
-          <p>
-            <strong>Album:</strong> {currentTrack.artist}
-          </p>
+          <h2>Title: <span>{currentTrack.title}</span></h2>
+          <h2>
+            Artist: <span>{currentTrack.artist}</span>
+          </h2>
+          <h2>
+            Album: <span>Chameleon</span>
+          </h2>
           <p className={styles.hash} aria-label="Tags">
             {currentTrack.tags.join(" ")}
           </p>

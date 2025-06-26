@@ -199,22 +199,35 @@
 }
 
 
-.textBox h3 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: goldenrod
+.textBox h2{
+    color: white;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+
+}
+.textBox span{
+font-weight: bold;
+color:goldenrod;
 }
 
-.textBox p {
-    margin: 0;
-    font-size: 1.1rem;
-    color: goldenrod
+.hash {
+    /* border: 1px white solid; */
+    margin-bottom: 0.5rem;
+    margin-top: .5rem;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    height: 80px;
+    color: rgb(248, 184, 186);
+    font-style: italic;
+    font-weight: bold;
+    word-wrap: break-word;
 }
 
 .spotifyBtn {
     font-size: 1.5rem;
     display: inline-block;
-    margin-top: 5.2rem;
+    margin-top: 2rem;
     padding: 0.5rem 1rem;
     background-color: #1db954;
     color: white;
