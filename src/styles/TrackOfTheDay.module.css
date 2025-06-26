@@ -1,0 +1,242 @@
+.trackContainer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    
+}
+
+.subheading {
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #da1414;
+    top: 0rem;
+    left: 26%;
+    padding: .1rem;
+    position: absolute;
+    cursor: none
+}
+
+.letterSubH {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin: 0 0.1em;
+    transform-origin: center;
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+.letterSubH:nth-child(1) {
+    transform: rotate(10deg) translateX(-2px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(1) {
+    transform: rotate(10deg) translateX(2px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(2) {
+    transform: rotate(-8deg) translateX(3px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(2) {
+    transform: rotate(-8deg) translateX(-3px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(3) {
+    transform: rotate(6deg);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(3) {
+    transform: rotate(6deg);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(4) {
+    transform: rotate(-12deg) translateX(2px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(4) {
+    transform: rotate(-12deg) translateX(-2px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(5) {
+    transform: rotate(8deg) translateX(-3px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(5) {
+    transform: rotate(8deg) translateX(3px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(6) {
+    transform: rotate(-6deg);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(6) {
+    transform: rotate(-6deg);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(7) {
+    transform: rotate(12deg) translateX(-2px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(7) {
+    transform: rotate(12deg) translateX(2px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(8) {
+    transform: rotate(-10deg) translateX(4px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(8) {
+    transform: rotate(-10deg) translateX(-4px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(9) {
+    transform: rotate(7deg);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(9) {
+    transform: rotate(7deg);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(10) {
+    transform: rotate(-9deg) translateX(3px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(10) {
+    transform: rotate(-9deg) translateX(-3px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(11) {
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(11) {
+    transform: rotate(5deg);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(12) {
+    transform: rotate(-11deg) translateX(2px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(12) {
+    transform: rotate(-11deg) translateX(-2px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(13) {
+    transform: rotate(9deg) translateX(-2px);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(13) {
+    transform: rotate(9deg) translateX(2px);
+    color: #da1414;
+}
+
+.letterSubH:nth-child(14) {
+    transform: rotate(-7deg);
+    transition: transform 0.3s ease;
+}
+
+.subHeadingContainer:hover .letterSubH:nth-child(14) {
+    transform: rotate(-7deg);
+    color: #da1414;
+}
+
+.mainContent {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 3rem;
+    border-radius: 10px;
+    /* background: #fafafa; */
+    /* background-color: #1a1a1a; */
+}
+
+.textBox {
+    /* border: 1px solid; */
+    background-color: #1a1a1a;
+    height: 300px;
+    width: 300px;
+    max-width: 3000px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* background-color: #e0f7fa; */
+    padding: 1rem;
+    /* add some padding so text doesn't touch edges */
+    /* border-radius: 10px; */
+}
+
+
+.textBox h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: goldenrod
+}
+
+.textBox p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: goldenrod
+}
+
+.spotifyBtn {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-top: 5.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #1db954;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0px;
+    width: fit-content;
+    transition: background 0.3s;
+}
+
+.spotifyBtn:hover {
+    background-color: #1ed760;
+}
+
+.currentTrack {
+    max-width: 350px;
+    position: relative;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* .albumCover {
+    border-radius: 10px;
+  } */

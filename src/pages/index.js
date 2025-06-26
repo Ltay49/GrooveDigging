@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Slideshow from "./components/Slideshow";
 import BannerSlide from "./components/BannerSlide";
+import TrackOfTheDay from "./components/TrackOfTheDay";
 
 const title = "GROOVE DIGGING";
 const imageNamesR = ["two", "four"];
@@ -158,7 +159,7 @@ export default function Home() {
           </div>
           <Slideshow />
         </section>
-
+                <TrackOfTheDay />
         <section className={styles.features}>
           <article className={styles.card}>
             <h2>🎵 Record Store</h2>
