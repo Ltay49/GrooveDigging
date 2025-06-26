@@ -2,8 +2,15 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/Slideshow.module.css";
 import Head from "next/head";
+import Link from "next/link";
 
 const images = ["/one.jpeg", "/two.jpeg", "/three.jpeg", "/four.jpeg"];
+
+const toSlug = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
 
 const records = [
   {
@@ -116,23 +123,26 @@ export default function Slideshow() {
           </div>
 
           <article className={styles.textBox}>
-            <header>
-              <h2>
-                {currentRecord.artist} – {currentRecord.album}
-              </h2>
-            </header>
-            <ul className={styles.recordInfo}>
-              <li>
-                <strong>Condition:</strong> {currentRecord.condition}
-              </li>
-              <li>
-                <strong>Price:</strong> {currentRecord.price}
-              </li>
-            </ul>
-            <p className={styles.hash} aria-label="Tags">
-              {currentRecord.tags.join(" ")}
-            </p>
-          </article>
+  <header className={styles.recordHeader}>
+    <h2>Artist: <span>{currentRecord.artist}</span></h2>
+    <h2>Album: <span>{currentRecord.album}</span></h2>
+  </header>
+  <ul className={styles.recordInfo}>
+    <li>Condition: <strong>{currentRecord.condition}</strong></li>
+    <li>Price: <strong>{currentRecord.price}</strong></li>
+  </ul>
+  <p className={styles.hash} aria-label="Tags">
+    {currentRecord.tags.join(" ")}
+  </p>
+  <Link
+    className={styles.viewBtn}
+    href={`/records/${toSlug(currentRecord.artist)}-${toSlug(currentRecord.album)}`}
+    passHref
+  >
+    View More
+  </Link>
+</article>
+
         </div>
 
         <div className={styles.sideImage}>
