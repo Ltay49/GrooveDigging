@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import Slideshow from "./components/Slideshow";
 import BannerSlide from "./components/BannerSlide";
 import TrackOfTheDay from "./components/TrackOfTheDay";
+import BannerCarousel from "./components/BannerCarousel";
 
 const title = "GROOVE DIGGING";
 const imageNamesR = ["two", "four"];
@@ -159,7 +160,9 @@ export default function Home() {
           </div>
           <Slideshow />
         </section>
+                <BannerCarousel />
                 <TrackOfTheDay />
+                
         <section className={styles.features}>
           <article className={styles.card}>
             <h2>🎵 Record Store</h2>
