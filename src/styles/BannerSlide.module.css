@@ -1,48 +1,68 @@
 .descriptionContainer {
   border-top: 2px solid;
   border-bottom: 2px solid;
-  /* border-radius: 20px; */
   margin-top: 1.5rem;
   margin-left: 5rem;
   width: 90vw;
   height: 180px;
-  overflow: hidden;
-  justify-content: center;
   background-color: white;
   position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .carouselTrack {
   display: flex;
-  width: max-content;
-  animation: scrollCarousel 60s linear infinite;
+  width: fit-content;
+  animation: scrollCarousel 30s linear infinite;
+  will-change: transform;
 }
 
 .description {
-  flex: 0 0 30vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto; /* Don't shrink or grow */
+  width: 250px;
+  padding: 1rem;
   font-size: 1.5rem;
   color: #555;
-  padding: 1rem;
-  box-sizing: border-box;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .bannerLogo {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   object-fit: contain;
 }
 
+/* Scrolling keyframes */
 @keyframes scrollCarousel {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-80%);
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 650px) {
+  .descriptionContainer {
+    width: 100vw;
+    height: 140px;
+    margin-left: 0;
+  }
+
+  .description {
+    width: 180px;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .bannerLogo {
+    width: 40px;
+    height: 40px;
   }
 }

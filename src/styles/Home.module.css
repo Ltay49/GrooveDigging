@@ -696,11 +696,17 @@
         background: rgba(0, 0, 0, 0.3);
       }
       .letter {
-        font-size: 20px;
+        display: none;
+        font-size: 25px;
         margin-bottom: 1rem;
       }
-      .nav{
-        display: none;
-      }
+      .nav {
+        z-index: 10;
+        width: auto;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-bottom: 1.5rem;
+        /* Pushes nav to the right side */
+    }
   }
   
