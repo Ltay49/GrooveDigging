@@ -32,40 +32,59 @@ export default function Banner() {
 
   return (
     <div className={styles.bannerWrapper}>
-         <div className={styles.albumGridWrapper}>
-      <div className={styles.albumRow}>
-        {firstRow.map((album, index) => (
-          <div key={index} className={styles.albumWrap}>
-            <Image
-              src={album.src}
-              alt={album.alt}
-              width={300}
-              height={300}
-              className={`${styles.albumImage} ${
-                activeIndex === index ? styles.active : ""
-              }`}
-            />
-          </div>
-        ))}
-      </div>
-      <div className={styles.albumRow}>
-        {secondRow.map((album, index) => (
-          <div key={index + midpoint} className={styles.albumWrap}>
-            <Image
-              src={album.src}
-              alt={album.alt}
-              width={300}
-              height={300}
-              className={`${styles.albumImage} ${
-                activeIndex === index + midpoint ? styles.active : ""
-              }`}
-            />
-          </div>
-        ))}
-      </div>
+<div className={styles.lightUpContainer}>
+  <div className={styles.row}>
+    <span className={styles.l1}>L</span>
+    <span className={styles.l1}>I</span>
+    <span className={styles.l1}>G</span>
+    <span className={styles.l1}>H</span>
+    <span className={styles.l1}>T</span>
+  </div>
+
+  <div className={styles.row}>
+    <span className={styles.l2}>UP</span>
+  </div>
+
+  <div className={styles.row}>
+    <span className={styles.l3}>YOUR</span>
+  </div>
+
+  <div className={styles.row}>
+    <span className={styles.l4}>COLLECTION</span>
+  </div>
+</div>
+      <div className={styles.albumGridWrapper}>
+        <div className={styles.albumRow}>
+          {firstRow.map((album, index) => (
+            <div key={index} className={styles.albumWrap}>
+              <Image
+                src={album.src}
+                alt={album.alt}
+                width={300}
+                height={300}
+                className={`${styles.albumImage} ${
+                  activeIndex === index ? styles.active : ""
+                }`}
+              />
+            </div>
+          ))}
+        </div>
+        <div className={styles.albumRow}>
+          {secondRow.map((album, index) => (
+            <div key={index + midpoint} className={styles.albumWrap}>
+              <Image
+                src={album.src}
+                alt={album.alt}
+                width={300}
+                height={300}
+                className={`${styles.albumImage} ${
+                  activeIndex === index + midpoint ? styles.active : ""
+                }`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
-

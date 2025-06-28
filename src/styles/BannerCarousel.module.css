@@ -44,4 +44,86 @@
     opacity: 1;
     z-index: 3;
   }
+
+  .lightUpContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
   
+  /* All rows centered */
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2.2rem;
+  }
+  
+  /* Colors fading brighter from top to bottom */
+  .l1 {
+    color: #ffa726; /* orange */
+  }
+  
+  .l2 {
+    color: #ffb74d; /* lighter orange */
+  }
+  
+  .l3 {
+    color: #ffe082; /* pale yellow */
+  }
+  
+  .l4 {
+    color: #fff9c4; /* very soft yellow */
+  }
+  @media (max-width: 768px) {
+    .bannerWrapper {
+      width: fit-content; /* keep tight wrapping */
+      height: fit-content;
+      margin: 0 auto; /* center horizontally */
+      padding: 0;
+    }
+  
+    .albumGridWrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0; /* no gap */
+      width: fit-content; /* wrap tightly */
+      margin: 0;
+      padding: 0;
+    }
+  
+    .albumRow {
+      display: contents; /* no layout wrapper */
+      margin: 0;
+      padding: 0;
+    }
+  
+    .albumWrap {
+      width: 100%;    /* fixed square size */
+      height: auto;
+      /* margin: 0.2rem;
+      padding: 0.2rem; */
+      overflow: hidden;
+    }
+  
+    .albumImage {
+      width: 100%;
+      height: 60%;
+      object-fit: contain; /* cover full area, no gaps */
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+  
+    .row {
+      font-size: 50px;
+    }
+  }
