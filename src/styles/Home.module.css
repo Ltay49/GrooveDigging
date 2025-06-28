@@ -35,7 +35,7 @@
     align-items: center;
     font-weight: bold;
     padding: 0rem;
-    letter-spacing: .1rem;
+    letter-spacing: .1em;
 }
 
 .subheading {
@@ -411,6 +411,7 @@
     width: 40vw;
     /* border: 1px solid wheat; */
     margin-left: auto;
+    margin-bottom: .5rem;
     /* Pushes nav to the right side */
 }
 
@@ -457,7 +458,6 @@
     height: 100%;
     object-fit: cover;
     display: block;
-
 }
 
 .overlay {
@@ -477,9 +477,11 @@
     font-size: 2rem;
     font-weight: bold;
     pointer-events: none;
-    z-index: 101;
+    z-index: 100;
 }
-
+.youBottom{
+    display: none;
+}
 .can {
     position: absolute;
     color: #da1414;
@@ -487,6 +489,7 @@
     top: 6rem;
     transform: rotate(0deg);
     font-size: 4rem;
+    z-index: 100;
 }
 
 .you {
@@ -496,6 +499,7 @@
     left: 5rem;
     transform: rotate(0deg);
     font-size: 4rem;
+    z-index: 105;
 }
 
 .dig {
@@ -515,3 +519,179 @@
     transform: rotate(0deg);
     font-size: 4rem;
 }
+.digB{
+    display: none;
+  }
+  .itB{
+    display: none;
+  }
+
+@media (max-width: 1200px) {
+    .title {
+        width: 50vw;
+        flex-direction: row;
+        letter-spacing: 0rem;
+      }
+      .imageWrapper {
+        width: 100%;
+      }
+      .nav {
+        z-index: 10;
+        width: 30vw;
+        margin-right: 2rem;
+        margin-bottom: 1.5rem;
+        /* border: 1px solid wheat; */
+      
+        /* Pushes nav to the right side */
+    }
+    .letter {
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+        /* Remove previous color if any */
+    }
+      .navList {
+        font-size: 25px;
+        /* gap: .5rem;
+        padding: 0; */
+    }
+    .logo {
+        width: 3.5rem;
+        z-index: 10;
+        /* Adjust size as needed */
+        height: auto;
+        /* animation: rotateScale 5s linear infinite; */
+    }
+  }
+
+  @media (max-width: 950px) {
+    .title {
+        border: 1px solid red;
+        width: 50vw;
+        flex-direction: row;
+        letter-spacing: 0rem;
+      }
+      .nav {
+        z-index: 10;
+        width: 30vw;
+        margin-bottom: 1.5rem;
+
+    }
+    .logo {
+        width: 3.5rem;
+        z-index: 10;
+        height: auto;
+    }
+  }
+
+
+  @media (max-width: 650px) {
+  .can {
+    position: absolute;
+    color: #da1414;
+    left: 1rem;
+    top: 7rem;
+    transform: rotate(0deg);
+    font-size: 4rem;
+}
+
+.you {
+    position: absolute;
+    color: white;
+    top: 7.5rem;
+    left: 1rem;
+    transform: rotate(0deg);
+    z-index: 100;
+}
+
+.dig {
+    position: absolute;
+    color: yellow;
+    bottom: 8rem;
+    left: 1rem;
+    transform: rotate(0deg);
+    font-size: 4rem;
+}
+
+.it {
+    position: absolute;
+    color: yellow;
+    bottom: 8rem;
+    left: 9rem;
+    transform: rotate(0deg);
+    font-size: 4rem;
+}
+.banner {
+    display: flex;
+    flex-direction: row;
+    transform: rotate(180deg);
+}
+
+
+.imageWrapper {
+    position: relative;
+    z-index: 100;
+    will-change: auto;
+}
+
+  }
+
+  @media (max-width: 650px) {
+    .bannerDiana {
+      width: 100vw; /* make it bigger than screen */
+      height: auto;
+      object-fit: cover;
+      display: block;
+      max-width: none;
+    }
+  
+    .imageWrapper {
+      overflow: hidden;
+      width: 100vw;
+      height: 200px;
+      position: relative;
+    }
+  
+    .banner {
+      flex-direction: column;
+      align-items: center;
+    }
+    .headerRow {
+        margin-bottom: -3rem;
+    }
+    .youBottom {
+        display:block;
+        position: absolute;
+        z-index: 9999; /* highest layer */
+        color: white;
+        bottom: 9.25rem;
+        left: 1rem;
+        transform: rotate(0deg);
+        pointer-events: none; /* optional, allows clicks through if needed */
+      }
+      .dig{
+        display: none;
+      }
+      .it{
+        display: none;
+      }
+      .digB{
+        display: block;
+        display: block;
+        position: absolute;
+        color: yellow;
+        top:1rem;
+        left: 1rem;
+        transform: rotate(0deg);
+        font-size: 4rem;
+      }
+      .itB{
+        display: block;
+        position: absolute;
+        color: yellow;
+        top:1rem;
+        left: 9rem;
+        transform: rotate(0deg);
+        font-size: 4rem;
+      }
+  }
+  

@@ -6,6 +6,7 @@ import Slideshow from "./components/Slideshow";
 import BannerSlide from "./components/BannerSlide";
 import TrackOfTheDay from "./components/TrackOfTheDay";
 import BannerCarousel from "./components/BannerCarousel";
+import { useEffect, useState } from "react";
 
 const title = "GROOVE DIGGING";
 const imageNamesR = ["two", "four"];
@@ -16,6 +17,23 @@ const toSlug = (text) =>
     .replace(/(^-|-$)+/g, "");
 
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1024
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const [hasMounted, setHasMounted] = useState(false);
+  useEffect(() => setHasMounted(true), []);
+
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 650;
+
+  const word = isMobile ? "YOOOU" : "YOOOOOOU";
+
   return (
     <>
       <Head>
@@ -113,7 +131,29 @@ export default function Home() {
               height={400}
               alt="Classic soul record cover"
             />
-            <div className={styles.overlay}></div>
+            <div className={styles.overlay}>
+              {hasMounted && (
+                <span className={styles.youBottom}>
+                  {(isMobile ? "YOOOOU" : "YOOOOOOU")
+                    .split("")
+                    .map((char, i) => (
+                      <span
+                        key={i}
+                        className={styles.youLetter}
+                        style={{
+                          fontSize: `${
+                            isMobile ? 3 + i * 0.5 : 5 + i * 0.5
+                          }rem`,
+                        }}
+                      >
+                        {char}
+                      </span>
+                    ))}
+                </span>
+              )}
+              <span className={styles.digB}>DIG</span>
+              <span className={styles.itB}>IT?</span>
+            </div>
           </div>
 
           <div className={styles.imageWrapper}>
@@ -127,17 +167,25 @@ export default function Home() {
             <div className={styles.overlay}>
               <h1>
                 <span className={styles.can}>CAN</span>
-                <span className={styles.you}>
-                  {"YOOOOOOU".split("").map((char, i) => (
-                    <span
-                      key={i}
-                      className={styles.youLetter}
-                      style={{ fontSize: `${5 + i * 0.5}rem` }}
-                    >
-                      {char}
-                    </span>
-                  ))}
-                </span>
+                {hasMounted && (
+                  <span className={styles.you}>
+                    {(isMobile ? "YOOOOU" : "YOOOOOOU")
+                      .split("")
+                      .map((char, i) => (
+                        <span
+                          key={i}
+                          className={styles.youLetter}
+                          style={{
+                            fontSize: `${
+                              isMobile ? 3 + i * 0.5 : 5 + i * 0.5
+                            }rem`,
+                          }}
+                        >
+                          {char}
+                        </span>
+                      ))}
+                  </span>
+                )}
                 <span className={styles.dig}>DIG</span>
                 <span className={styles.it}>IT?</span>
               </h1>
@@ -160,9 +208,9 @@ export default function Home() {
           </div>
           <Slideshow />
         </section>
-                <BannerCarousel />
-                <TrackOfTheDay />
-                
+        <BannerCarousel />
+        <TrackOfTheDay />
+
         <section className={styles.features}>
           <article className={styles.card}>
             <h2>🎵 Record Store</h2>
