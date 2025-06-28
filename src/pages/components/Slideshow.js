@@ -7,10 +7,7 @@ import Link from "next/link";
 const images = ["/one.jpeg", "/two.jpeg", "/three.jpeg", "/four.jpeg"];
 
 const toSlug = (text) =>
-  text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)+/g, "");
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
 
 const records = [
   {
@@ -18,15 +15,7 @@ const records = [
     album: "Galaxy",
     condition: "VG+",
     price: "£20.00",
-    tags: [
-      "#Funk",
-      "#Disco",
-      "#70's",
-      "#Essential",
-      "#Groovy",
-      "#WAR",
-      "#Galaxy",
-    ],
+    tags: ["#Funk", "#Disco", "#70's", "#Essential", "#Groovy", "#WAR", "#Galaxy"],
   },
   {
     artist: "James Brown",
@@ -53,6 +42,7 @@ const records = [
 
 export default function Slideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showInfo, setShowInfo] = useState(false);
 
   const getImage = (offset = 0) => {
     const i = (currentIndex + offset + images.length) % images.length;
@@ -61,41 +51,12 @@ export default function Slideshow() {
 
   const currentRecord = records[currentIndex];
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  const toggleInfo = () => setShowInfo((prev) => !prev);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
-  <Head>
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        name: `${currentRecord.artist} - ${currentRecord.album}`,
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "GBP",
-          price: currentRecord.price.replace("£", ""),
-          availability: "https://schema.org/InStock",
-        },
-        category: "Music",
-        brand: {
-          "@type": "Brand",
-          name: currentRecord.artist,
-        },
-      })}
-    </script>
-  </Head>;
   return (
-    <section
-      className={styles.slideshowContainer}
-      aria-label="Featured Record Slideshow"
-    >
+    <section className={styles.slideshowContainer} aria-label="Featured Record Slideshow">
       <button
-        onClick={handlePrev}
+        onClick={() => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)}
         className={`${styles.arrow} ${styles.left}`}
         aria-label="Previous record"
       >
@@ -104,12 +65,7 @@ export default function Slideshow() {
 
       <div className={styles.carousel}>
         <div className={styles.sideImage}>
-          <Image
-            src={getImage(-1)}
-            alt={`Album cover of ${currentRecord.artist} - ${currentRecord.album}`}
-            fill
-            className={styles.image}
-          />
+          <Image src={getImage(-1)} alt="Previous" fill className={styles.image} />
         </div>
 
         <div className={styles.mainContent}>
@@ -120,38 +76,45 @@ export default function Slideshow() {
               fill
               className={styles.image}
             />
+
+            {/* Mobile Info Icon */}
+            <button onClick={toggleInfo} className={styles.infoIcon} aria-label="Toggle info">
+              i
+            </button>
           </div>
 
-          <article className={styles.textBox}>
-  <header className={styles.recordHeader}>
-    <h2>Artist: <span>{currentRecord.artist}</span></h2>
-    <h2>Album: <span>{currentRecord.album}</span></h2>
-  </header>
-  <ul className={styles.recordInfo}>
-    <li>Condition: <strong>{currentRecord.condition}</strong></li>
-    <li>Price: <strong>{currentRecord.price}</strong></li>
-  </ul>
-  <p className={styles.hash} aria-label="Tags">
-    {currentRecord.tags.join(" ")}
-  </p>
-  <Link
-    className={styles.viewBtn}
-    href={`/records/${toSlug(currentRecord.artist)}-${toSlug(currentRecord.album)}`}
-    passHref
-  >
-    View More
-  </Link>
-</article>
-
+          {/* Info Box: visible always on desktop, toggled on mobile */}
+          <article
+            className={`${styles.textBox} ${
+              showInfo ? styles.visible : ""
+            }`}
+          >
+            <header className={styles.recordHeader}>
+              <h2>Artist: <span>{currentRecord.artist}</span></h2>
+              <h2>Album: <span>{currentRecord.album}</span></h2>
+            </header>
+            <ul className={styles.recordInfo}>
+              <li>Condition: <strong>{currentRecord.condition}</strong></li>
+              <li>Price: <strong>{currentRecord.price}</strong></li>
+            </ul>
+            <p className={styles.hash}>{currentRecord.tags.join(" ")}</p>
+            <Link
+              className={styles.viewBtn}
+              href={`/records/${toSlug(currentRecord.artist)}-${toSlug(currentRecord.album)}`}
+              passHref
+            >
+              View More
+            </Link>
+          </article>
         </div>
 
         <div className={styles.sideImage}>
-          <Image src={getImage(1)} alt="next" fill className={styles.image} />
+          <Image src={getImage(1)} alt="Next" fill className={styles.image} />
         </div>
       </div>
 
       <button
-        onClick={handleNext}
+        onClick={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
         className={`${styles.arrow} ${styles.right}`}
         aria-label="Next record"
       >

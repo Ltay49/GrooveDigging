@@ -4,6 +4,7 @@
     max-width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    overflow: hidden;
 }
 
 .title {
@@ -635,6 +636,10 @@
   }
 
   @media (max-width: 650px) {
+
+    .letterSubH{
+        font-size: 30px;
+    }
     .bannerDiana {
       width: 100vw; /* make it bigger than screen */
       height: auto;
@@ -704,9 +709,22 @@
         z-index: 10;
         width: auto;
         border-radius: 10px;
-        margin-left: auto;
+        margin-right: 4rem;
         margin-bottom: 1.5rem;
         /* Pushes nav to the right side */
+    }
+    .nav li{
+        font-size: 20px;
+    }
+    .moreRecords {
+        left: 1%;
+        top: 21rem;
+        position: absolute;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 10;
     }
   }
   

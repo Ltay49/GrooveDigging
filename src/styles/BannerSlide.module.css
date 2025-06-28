@@ -15,7 +15,7 @@
 .carouselTrack {
   display: flex;
   width: fit-content;
-  animation: scrollCarousel 30s linear infinite;
+  animation: scrollCarousel 60s linear infinite;
   will-change: transform;
 }
 
@@ -53,6 +53,7 @@
     width: 100vw;
     height: 140px;
     margin-left: 0;
+    margin-bottom: 3.5rem;
   }
 
   .description {

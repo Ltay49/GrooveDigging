@@ -150,3 +150,82 @@ color:goldenrod;
 .right {
     right: 1rem;
 }
+
+.infoIcon {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    padding: 0.1rem 1rem;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .showInfo {
+    display: block !important;
+  }
+
+@media (max-width: 768px) {
+
+    .infoIcon {
+        display: block;
+      }
+
+    .sideImage {
+        flex: 0 0 200px;
+        height: 200px;
+        position: relative;
+        opacity: 0.5;
+        transform: scale(0.9);
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+    
+    .mainContent {
+        display: flex;
+        flex: 0 0 400px;
+        height: auto;
+        gap: 1rem;
+        transition: transform 0.5s ease-in-out;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+    
+    .mainImage {
+       height: 300px;
+       width: 300px;
+        position: relative;
+      object-fit: contain;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+  .textBox {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #1a1a1a;
+    z-index: 4;
+    padding: 1rem;
+  }
+
+  .textBox.visible {
+    display: block;
+  }
+
+  .textBox h2,
+  .recordInfo li,
+  .hash {
+    font-size: 1rem;
+  }
+}
+
