@@ -67,7 +67,7 @@
     font-size: 5rem;
     right:4rem;
     bottom:0rem;
-    color: #fff9c4;
+    color: #1c7805;
   }
   
   .l2 {
@@ -89,7 +89,7 @@
     word-spacing: 1rem;
     font-size: 6rem;
     position: absolute;
-    color: #fff9c4;
+    color: #bb0202;
     transform: translate(-55%, -0%);
   }
   .l5 {
@@ -143,17 +143,18 @@
       font-size: 50px;
     }
   }
-  @media (max-width: 550px)  and (pointer: coarse){
+  @media (max-width: 550px)and (pointer: coarse) {
     .l1 {
         position: absolute;
         font-size: 4rem;
         right:4rem;
         bottom:0rem;
         color: #1c7805;
+        transform: translate(40%);
       }
       
       .l2 {
-        transform: translate(-58%, -50%);
+        transform: translate(-48%, -50%);
         position: absolute;
         font-size: 3rem;
         right:1rem;
@@ -161,7 +162,7 @@
       }
       
       .l3 {
-        transform: translate(-50%, -50%);
+        transform: translate(-40%, -50%);
         font-size: 3rem;
         position: absolute;
         color: #fff9c4;
@@ -172,7 +173,7 @@
         font-size: 5rem;
         position: absolute;
         color: #bb0202;
-        transform: translate(-55%, -0%);
+        transform: translate(-40%, -0%);
       }
       .l5 {
         word-spacing: 1rem;

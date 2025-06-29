@@ -35,6 +35,9 @@ const articles = [
 function LatestArticle() {
   return (
     <section className={styles.container}>
+          <h1 className={styles.subheading}>
+        Latest Reads
+      </h1>{" "}
       {articles.map((article, index) => (
         <article key={index} className={styles.card}>
           <div className={styles.imageWrapper}>
