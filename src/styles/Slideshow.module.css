@@ -8,7 +8,7 @@
     margin: 4rem auto;
     padding: 2rem;
     background: none;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
     overflow: hidden;
     /* border-radius: 1rem; */
 }
@@ -122,7 +122,7 @@ color:goldenrod;
 
 
 .image {
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .arrow {
@@ -130,8 +130,8 @@ color:goldenrod;
     top: 50%;
     transform: translateY(-50%);
     font-size: 2.5rem;
-    background: rgba(0, 0, 0, 0.2);
-    color: white;
+    /* background: rgba(0, 0, 0, 0.2); */
+    color: black;
     border: none;
     padding: 0.5rem;
     cursor: pointer;
@@ -177,8 +177,8 @@ color:goldenrod;
       }
 
     .sideImage {
-        flex: 0 0 200px;
-        height: 200px;
+        flex: 0 0 150px;
+        height: 150px;
         position: relative;
         opacity: 0.5;
         transform: scale(0.9);
@@ -188,7 +188,7 @@ color:goldenrod;
     
     .mainContent {
         display: flex;
-        flex: 0 0 400px;
+        flex: 0 0 200px;
         height: auto;
         gap: 1rem;
         transition: transform 0.5s ease-in-out;
@@ -198,8 +198,9 @@ color:goldenrod;
     }
     
     .mainImage {
-       height: 300px;
-       width: 300px;
+        flex: 0 0 200px;
+       height: 200px;
+       width: 200px;
         position: relative;
       object-fit: contain;
         overflow: hidden;

@@ -2,6 +2,7 @@
   border-top: 2px solid;
   border-bottom: 2px solid;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   margin-left: 5rem;
   width: 90vw;
   height: 180px;
@@ -15,7 +16,7 @@
 .carouselTrack {
   display: flex;
   width: fit-content;
-  animation: scrollCarousel 60s linear infinite;
+  animation: scrollCarousel 90s linear infinite;
   will-change: transform;
 }
 
@@ -24,7 +25,7 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto; /* Don't shrink or grow */
-  width: 250px;
+  width: 300px;
   padding: 1rem;
   font-size: 1.5rem;
   color: #555;
@@ -50,14 +51,15 @@
 /* Mobile styles */
 @media (max-width: 650px) {
   .descriptionContainer {
+    margin-top: 0rem;
     width: 100vw;
-    height: 140px;
+    height: 100px;
     margin-left: 0;
-    margin-bottom: 3.5rem;
+    margin-bottom: 0rem;
   }
 
   .description {
-    width: 180px;
+    width: 250px;
     font-size: 1rem;
     padding: 0.5rem;
   }

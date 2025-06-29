@@ -193,6 +193,7 @@ export default function Home() {
           </div>
         </section>
         <BannerSlide />
+        <BannerCarousel />
         <section>
           <div className={styles.subHeadingContainer}>
             <h1 className={styles.subheading}>
@@ -202,13 +203,13 @@ export default function Home() {
                 </span>
               ))}
             </h1>{" "}
-            <Link className={styles.moreRecords} href={`/records`} passHref>
+          {/* <Link className={styles.moreRecords} href={`/records`} passHref>
               see collection
-            </Link>
+            </Link> */}
           </div>
           <Slideshow />
         </section>
-        <BannerCarousel />
+  
         <TrackOfTheDay />
 
         <section className={styles.features}>
