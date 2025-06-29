@@ -83,6 +83,25 @@
   .l4 {
     color: #fff9c4; /* very soft yellow */
   }
+  .viewAllLink {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 1rem;
+    color: #fff9c4;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    z-index: 200;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .viewAllLink:hover {
+    background-color: #fff9c4;
+    color: #000;
+  }
   @media (max-width: 768px) {
     .bannerWrapper {
       width: fit-content; /* keep tight wrapping */

@@ -32,28 +32,31 @@ export default function Banner() {
 
   return (
     <div className={styles.bannerWrapper}>
-<div className={styles.lightUpContainer}>
-  <div className={styles.row}>
-    <span className={styles.l1}>L</span>
-    <span className={styles.l1}>I</span>
-    <span className={styles.l1}>G</span>
-    <span className={styles.l1}>H</span>
-    <span className={styles.l1}>T</span>
-  </div>
+      <div className={styles.lightUpContainer}>
+        <div className={styles.row}>
+          <span className={styles.l1}>L</span>
+          <span className={styles.l1}>I</span>
+          <span className={styles.l1}>G</span>
+          <span className={styles.l1}>H</span>
+          <span className={styles.l1}>T</span>
+        </div>
 
-  <div className={styles.row}>
-    <span className={styles.l2}>UP</span>
-  </div>
+        <div className={styles.row}>
+          <span className={styles.l2}>UP</span>
+        </div>
 
-  <div className={styles.row}>
-    <span className={styles.l3}>YOUR</span>
-  </div>
+        <div className={styles.row}>
+          <span className={styles.l3}>YOUR</span>
+        </div>
 
-  <div className={styles.row}>
-    <span className={styles.l4}>COLLECTION</span>
-  </div>
-</div>
+        <div className={styles.row}>
+          <span className={styles.l4}>COLLECTION</span>
+        </div>
+      </div>
       <div className={styles.albumGridWrapper}>
+        <a href="/articles" className={styles.viewAllLink}>
+          View all records for sale →
+        </a>
         <div className={styles.albumRow}>
           {firstRow.map((album, index) => (
             <div key={index} className={styles.albumWrap}>

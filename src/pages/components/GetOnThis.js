@@ -47,6 +47,9 @@ export default function Banner() {
   </div>
 </div>
       <div className={styles.albumGridWrapper}>
+      <a href="/articles" className={styles.viewAllLink}>
+  View All Articles →
+</a>
         <div className={styles.albumRow}>
           {firstRow.map((album, index) => (
             <div key={index} className={styles.albumWrap}>
