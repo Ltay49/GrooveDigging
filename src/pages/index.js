@@ -126,15 +126,18 @@ export default function Home() {
 
         <section className={styles.banner}>
           <div className={styles.imageWrapper}>
-            <Image
-              className={styles.bannerDiana}
-              src="/cover1.png"
-              width={1200}
-              height={450}
-              alt="Classic soul record cover"
-              priority
-              loading="eager"
-            />
+            <div className={styles.imageWrapper}>
+              <Image
+                className={styles.bannerDiana}
+                src="/cover.png"
+                alt="Rare funk vinyl cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
+                quality={75}
+              />
+            </div>
+
             <div className={styles.overlay}>
               {hasMounted && (
                 <span className={styles.youBottom}>
@@ -161,13 +164,18 @@ export default function Home() {
           </div>
 
           <div className={styles.imageWrapper}>
-            <Image
-              className={styles.bannerDiana}
-              src="/cover.png"
-              width={1200}
-              height={450}
-              alt="Rare funk vinyl cover"
-            />
+            <div className={styles.imageWrapper}>
+              <Image
+                className={styles.bannerDiana}
+                src="/cover1.png"
+                alt="Classic soul record cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+                quality={75}
+              />
+            </div>
+
             <div className={styles.overlay}>
               <h1>
                 <span className={styles.can}>CAN</span>
