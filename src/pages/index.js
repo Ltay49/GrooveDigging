@@ -195,7 +195,7 @@ export default function Home() {
         {/* <BannerSlide /> */}
         <div className={styles.layoutWrapper}>
   <div className={styles.introContainer}>
-    <p>Here <a href="https://www.instagram.com/groovedigging" target="_blank" rel="noopener noreferrer" className={styles.igLink}>@groovedigging</a> we let the music play.
+    <p>Here <a href="https://www.instagram.com/groovedigging" target="_blank" rel="noopener noreferrer" className={styles.igLink}>groovedigging</a> we let the music play.
     No more gate keeping.
     Sharing records off the beaten track that make you wanna dance.</p>
     <p>
@@ -228,15 +228,8 @@ export default function Home() {
         <section>
           <div className={styles.subHeadingContainer}>
             <h1 className={styles.subheading}>
-              {"Latest Records".split("").map((char, i) => (
-                <span key={i} className={styles.letterSubH}>
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
+              Latest Records
             </h1>{" "}
-          {/* <Link className={styles.moreRecords} href={`/records`} passHref>
-              see collection
-            </Link> */}
           </div>
           <Slideshow />
         </section>
