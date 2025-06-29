@@ -126,17 +126,15 @@ export default function Home() {
 
         <section className={styles.banner}>
           <div className={styles.imageWrapper}>
-            <div className={styles.imageWrapper}>
-              <Image
-                className={styles.bannerDiana}
-                src="/cover.png"
-                alt="Rare funk vinyl cover"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                loading="lazy"
-                quality={75}
-              />
-            </div>
+            <Image
+              className={styles.bannerDiana}
+              src="/cover.png"
+              alt="Rare funk vinyl cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={75}
+              priority
+            />
 
             <div className={styles.overlay}>
               {hasMounted && (
