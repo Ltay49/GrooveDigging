@@ -32,7 +32,7 @@ export default function Banner() {
     <div className={styles.bannerWrapper}>
 <div className={styles.lightUpContainer}>
 <div className={styles.row}>
-    <span className={styles.l1}>'ERE</span>
+    <span className={styles.l1}>&apos;ERE</span>
   </div>
   <div className={styles.row}>
     <span className={styles.l2}>GET</span>

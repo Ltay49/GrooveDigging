@@ -92,6 +92,13 @@
     color: #fff9c4;
     transform: translate(-55%, -0%);
   }
+  .l5 {
+    word-spacing: 1rem;
+    font-size: 20px;
+    position: absolute;
+    color: #fff9c4;
+    transform: translate(100%, -100%);
+  }
   @media (max-width: 768px) {
     .bannerWrapper {
       width: fit-content; /* keep tight wrapping */

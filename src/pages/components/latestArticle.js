@@ -7,7 +7,7 @@ const articles = [
     title: "The Allure of OBI",
     subheading: "Why Japanese Vinyl Records Are Collector Gold",
     body:
-      "If you’ve ever stumbled across a Japanese record with a strange little paper strip running down the side, congrats — you’ve just discovered an OBI strip, one of the most coveted features in vinyl collecting. Japanese vinyl isn’t just about sound — it’s about craft, culture, and collectability.",
+      "If you&aposve ever stumbled across a Japanese record with a strange little paper strip running down the side, congrats — you’ve just discovered an OBI strip, one of the most coveted features in vinyl collecting. Japanese vinyl isn’t just about sound — it’s about craft, culture, and collectability.",
     image: "/cover.png",
     date: "29/06/2025",
     author: "GrooveDigging",
