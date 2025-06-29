@@ -61,6 +61,7 @@
   }
   
   .quickLinks {
+    text-align: left;
     padding: 2rem;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -74,7 +75,7 @@
     font-size: 1.3rem;
     font-weight: 600;
     color: #1a1a1a;
-    text-align: center;
+    text-align: left;
   }
   
   .linkItem {
@@ -965,13 +966,16 @@
     .layoutWrapper{
         flex-direction: column;
         gap: 0rem;
+
     }
     .introContainer{
        max-width: 100%;
        margin-bottom: 0rem;
+       padding: 0rem;
+       padding-top: 1rem;
+       line-height: 1.8rem;
     }
     .quickLinks{
         max-width: 100%;
     }
   }
-  
