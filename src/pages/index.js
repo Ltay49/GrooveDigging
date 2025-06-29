@@ -19,6 +19,7 @@ const toSlug = (text) =>
     .replace(/(^-|-$)+/g, "");
 
 export default function Home() {
+
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1024
   );
@@ -126,16 +127,15 @@ export default function Home() {
 
         <section className={styles.banner}>
           <div className={styles.imageWrapper}>
-            <Image
-              className={styles.bannerDiana}
-              src="/cover.png"
-              alt="Rare funk vinyl cover"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              quality={75}
-              priority
-            />
-
+          <Image
+          className={styles.bannerDiana}
+          src="/cover.png"
+          alt="Rare funk vinyl cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          quality={75}
+          priority
+        />
             <div className={styles.overlay}>
               {hasMounted && (
                 <span className={styles.youBottom}>
@@ -169,8 +169,8 @@ export default function Home() {
                 alt="Classic soul record cover"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                priority
                 quality={75}
+                loading="lazy"
               />
             </div>
 
