@@ -3,9 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Slideshow from "./components/Slideshow";
-import BannerSlide from "./components/BannerSlide";
+import LatestArticle from "./components/latestArticle";
 import TrackOfTheDay from "./components/TrackOfTheDay";
 import BannerCarousel from "./components/BannerCarousel";
+import GetOnThis from './components/GetOnThis'
+
 import { useEffect, useState } from "react";
 
 const title = "GROOVE DIGGING";
@@ -235,6 +237,9 @@ export default function Home() {
         </section>
   
         <TrackOfTheDay />
+        <GetOnThis />
+        <br/>
+        <LatestArticle />
       </main>
     </>
   );
