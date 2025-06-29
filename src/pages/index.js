@@ -199,14 +199,14 @@ export default function Home() {
     No more gate keeping.
     Sharing records off the beaten track that make you wanna dance.</p>
     <p>
-      If you want to buy records, read content and listen all whilst sharing your own digs and thoughts – then here is the place.
+      If you want to buy records, read content and listen all whilst sharing your own digs and thoughts, then here is the place.
     </p>
   </div>
 
   <div className={styles.quickLinks}>
     <div className={styles.linkItem}>
       <h4>Share Music</h4>
-      <p>Post the gems you've found, and hear what others are spinning.</p>
+      <p>Post the gems you&apos;ve found, and hear what others are spinning.</p>
     </div>
     <div className={styles.linkItem}>
       <h4>Buy Records</h4>
