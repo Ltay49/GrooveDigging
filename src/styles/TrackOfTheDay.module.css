@@ -5,227 +5,80 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     padding: 2rem;
-    
-}
-
-.subheading {
-    border-radius: 10px;
-    z-index: 10;
-    background-color: #da1414;
-    top: 0rem;
-    left: 26%;
-    padding: .1rem;
-    position: absolute;
-    cursor: none
-}
-
-.letterSubH {
-    color: rgb(255, 255, 255);
-    display: inline-block;
-    margin: 0 0.1em;
-    transform-origin: center;
-    font-weight: bold;
-    font-size: 2.3rem;
-}
-
-.letterSubH:nth-child(1) {
-    transform: rotate(10deg) translateX(-2px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(1) {
-    transform: rotate(10deg) translateX(2px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(2) {
-    transform: rotate(-8deg) translateX(3px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(2) {
-    transform: rotate(-8deg) translateX(-3px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(3) {
-    transform: rotate(6deg);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(3) {
-    transform: rotate(6deg);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(4) {
-    transform: rotate(-12deg) translateX(2px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(4) {
-    transform: rotate(-12deg) translateX(-2px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(5) {
-    transform: rotate(8deg) translateX(-3px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(5) {
-    transform: rotate(8deg) translateX(3px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(6) {
-    transform: rotate(-6deg);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(6) {
-    transform: rotate(-6deg);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(7) {
-    transform: rotate(12deg) translateX(-2px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(7) {
-    transform: rotate(12deg) translateX(2px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(8) {
-    transform: rotate(-10deg) translateX(4px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(8) {
-    transform: rotate(-10deg) translateX(-4px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(9) {
-    transform: rotate(7deg);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(9) {
-    transform: rotate(7deg);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(10) {
-    transform: rotate(-9deg) translateX(3px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(10) {
-    transform: rotate(-9deg) translateX(-3px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(11) {
-    transform: rotate(5deg);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(11) {
-    transform: rotate(5deg);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(12) {
-    transform: rotate(-11deg) translateX(2px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(12) {
-    transform: rotate(-11deg) translateX(-2px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(13) {
-    transform: rotate(9deg) translateX(-2px);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(13) {
-    transform: rotate(9deg) translateX(2px);
-    color: #da1414;
-}
-
-.letterSubH:nth-child(14) {
-    transform: rotate(-7deg);
-    transition: transform 0.3s ease;
-}
-
-.subHeadingContainer:hover .letterSubH:nth-child(14) {
-    transform: rotate(-7deg);
-    color: #da1414;
-}
-
-.mainContent {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .subheading {
+    width: 77%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    z-index: 2;
+    position: relative;
+    background: transparent;
+  }
+  
+  
+  .mainContent {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 3rem;
     border-radius: 10px;
-    /* background: #fafafa; */
-    /* background-color: #1a1a1a; */
-}
-
-.textBox {
-    /* border: 1px solid; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .textBox {
     background-color: #1a1a1a;
-    height: 300px;
     width: 300px;
-    max-width: 3000px;
+    max-width: 90%;
     text-align: left;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    /* background-color: #e0f7fa; */
     padding: 1rem;
-    /* add some padding so text doesn't touch edges */
-    /* border-radius: 10px; */
-}
-
-
-.textBox h2{
+    box-sizing: border-box;
+  }
+  
+  .textBox h2 {
     color: white;
     margin: 0.5rem 0;
     font-size: 1.1rem;
-
-}
-.textBox span{
-font-weight: bold;
-color:goldenrod;
-}
-
-.hash {
-    /* border: 1px white solid; */
+  }
+  
+  .textBox span {
+    font-weight: bold;
+    color: goldenrod;
+  }
+  
+  .hash {
     margin-bottom: 0.5rem;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     font-size: 1rem;
-    justify-content: center;
     text-align: center;
-    height: 80px;
+    height: auto;
     color: rgb(248, 184, 186);
     font-style: italic;
     font-weight: bold;
     word-wrap: break-word;
-}
-
-.spotifyBtn {
-    font-size: 1.5rem;
+  }
+  
+  .spotifyBtn {
+    font-size: 1.2rem;
     display: inline-block;
     margin-top: 2rem;
     padding: 0.5rem 1rem;
@@ -236,20 +89,51 @@ color:goldenrod;
     border-radius: 0px;
     width: fit-content;
     transition: background 0.3s;
-}
-
-.spotifyBtn:hover {
+  }
+  
+  .spotifyBtn:hover {
     background-color: #1ed760;
-}
-
-.currentTrack {
-    max-width: 350px;
-    position: relative;
-    /* border-radius: 10px; */
+  }
+  
+  .currentTrack {
+    width:300px;
+   height: 300px;
+    object-fit: contain;
+    max-width: 100%;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .mainContent {
+      flex-direction: column;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+      justify-content: center;
+      align-content: center;
+      text-align: left;
+      width: 100vw;
+      border-radius: 0rem;
+    }
+  
+    .textBox {
+      width: fit-content;
+    }
+  
+    .subheading {
+        width: 100%;
+        text-align: left;
+      font-size: 1.5rem;
+    }
+  
+    .spotifyBtn {
+      font-size: 1rem;
+      padding: 0.5rem 0.8rem;
+    }
+  
+    .currentTrack {
+      width: fit-content;
 
-/* .albumCover {
-    border-radius: 10px;
-  } */
+    }
+  }
+  

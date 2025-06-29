@@ -195,7 +195,7 @@ export default function Home() {
         {/* <BannerSlide /> */}
         <div className={styles.layoutWrapper}>
   <div className={styles.introContainer}>
-    <p>Here <a href="https://www.instagram.com/groovedigging" target="_blank" rel="noopener noreferrer" className={styles.igLink}>groovedigging</a> we let the music play.
+    <p>Here at <a href="https://www.instagram.com/groovedigging" target="_blank" rel="noopener noreferrer" className={styles.igLink}>groovedigging</a> we let the music play.
     No more gate keeping.
     Sharing records off the beaten track that make you wanna dance.</p>
     <p>
@@ -235,41 +235,6 @@ export default function Home() {
         </section>
   
         <TrackOfTheDay />
-
-        <section className={styles.features}>
-          <article className={styles.card}>
-            <h2>🎵 Record Store</h2>
-            <p>
-              Browse our curated collection of vinyl records from funk, jazz,
-              soul, hip-hop, and more.
-            </p>
-            <Link href="/records" className={styles.link}>
-              Shop Records &rarr;
-            </Link>
-          </article>
-
-          <article className={styles.card}>
-            <h2>📝 Music Blog</h2>
-            <p>
-              Read interviews, underground artist highlights, and deep dives
-              into music history.
-            </p>
-            <Link href="/blog" className={styles.link}>
-              Read Blogs &rarr;
-            </Link>
-          </article>
-
-          <article className={styles.card}>
-            <h2>🎧 Music Sharing</h2>
-            <p>
-              Submit your own playlists and connect with others through shared
-              sounds.
-            </p>
-            <Link href="/music" className={styles.link}>
-              Explore Music &rarr;
-            </Link>
-          </article>
-        </section>
       </main>
     </>
   );

@@ -47,11 +47,7 @@ export default function TrackOfTheDay() {
   return (
     <section className={styles.trackContainer}>
       <h1 className={styles.subheading}>
-        {"Dig Of The Week".split("").map((char, i) => (
-          <span key={i} className={styles.letterSubH}>
-            {char === " " ? "\u00A0" : char}
-          </span>
-        ))}
+        Dig Of The Week
       </h1>{" "}
       <div className={styles.mainContent}>
         <article className={styles.textBox}>

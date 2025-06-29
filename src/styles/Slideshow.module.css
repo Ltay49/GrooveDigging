@@ -177,13 +177,13 @@ color:goldenrod;
       }
 
     .sideImage {
-        flex: 0 0 150px;
-        height: 150px;
+        flex: 0 0 100px;
+        height: 100px;
         position: relative;
         opacity: 0.5;
-        transform: scale(0.9);
+        transform: scale(1);
         overflow: hidden;
-        border-radius: 1rem;
+        border-radius: 0rem;
     }
     
     .mainContent {
@@ -191,6 +191,7 @@ color:goldenrod;
         flex: 0 0 200px;
         height: auto;
         gap: 1rem;
+        padding: 0rem;
         transition: transform 0.5s ease-in-out;
         flex-direction: column;
         align-items: center;
