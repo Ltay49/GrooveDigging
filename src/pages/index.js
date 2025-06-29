@@ -164,8 +164,8 @@ export default function Home() {
             <Image
               className={styles.bannerDiana}
               src="/cover.png"
-              width={500}
-              height={400}
+              width={1200}
+              height={450}
               alt="Rare funk vinyl cover"
             />
             <div className={styles.overlay}>
