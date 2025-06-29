@@ -192,7 +192,38 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <BannerSlide />
+        {/* <BannerSlide /> */}
+        <div className={styles.layoutWrapper}>
+  <div className={styles.introContainer}>
+    <p>Here <a href="https://www.instagram.com/groovedigging" target="_blank" rel="noopener noreferrer" className={styles.igLink}>@groovedigging</a> we let the music play.
+    No more gate keeping.
+    Sharing records off the beaten track that make you wanna dance.</p>
+    <p>
+      If you want to buy records, read content and listen all whilst sharing your own digs and thoughts – then here is the place.
+    </p>
+  </div>
+
+  <div className={styles.quickLinks}>
+    <div className={styles.linkItem}>
+      <h4>Share Music</h4>
+      <p>Post the gems you've found, and hear what others are spinning.</p>
+    </div>
+    <div className={styles.linkItem}>
+      <h4>Buy Records</h4>
+      <p>Discover rare, independent, and dance-floor-ready vinyl.</p>
+    </div>
+    <div className={styles.linkItem}>
+      <h4>Read Content</h4>
+      <p>Dive into stories, artist features, and collector tips.</p>
+    </div>
+    <div className={styles.linkItem}>
+      <h4>Join the Community</h4>
+      <p>Connect with diggers, DJs, and collectors just like you.</p>
+    </div>
+  </div>
+</div>
+
+
         <BannerCarousel />
         <section>
           <div className={styles.subHeadingContainer}>
