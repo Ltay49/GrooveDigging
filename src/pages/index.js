@@ -6,7 +6,7 @@ import Slideshow from "./components/Slideshow";
 import LatestArticle from "./components/latestArticle";
 import TrackOfTheDay from "./components/TrackOfTheDay";
 import BannerCarousel from "./components/BannerCarousel";
-import GetOnThis from './components/GetOnThis'
+import GetOnThis from "./components/GetOnThis";
 
 import { useEffect, useState } from "react";
 
@@ -129,9 +129,11 @@ export default function Home() {
             <Image
               className={styles.bannerDiana}
               src="/cover1.png"
-              width={500}
-              height={400}
+              width={1200}
+              height={450}
               alt="Classic soul record cover"
+              priority
+              loading="eager"
             />
             <div className={styles.overlay}>
               {hasMounted && (
@@ -196,49 +198,60 @@ export default function Home() {
         </section>
         {/* <BannerSlide /> */}
         <div className={styles.layoutWrapper}>
-  <div className={styles.introContainer}>
-    <p>Here at <a href="https://www.instagram.com/groovedigging" target="_blank" rel="noopener noreferrer" className={styles.igLink}>groovedigging</a> we let the music play.
-    No more gate keeping.
-    Sharing records off the beaten track that make you wanna dance.</p>
-    <p>
-      If you want to buy records, read content and listen all whilst sharing your own digs and thoughts, then here is the place.
-    </p>
-  </div>
+          <div className={styles.introContainer}>
+            <p>
+              Here at{" "}
+              <a
+                href="https://www.instagram.com/groovedigging"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.igLink}
+              >
+                groovedigging
+              </a>{" "}
+              we let the music play. No more gate keeping. Sharing records off
+              the beaten track that make you wanna dance.
+            </p>
+            <p>
+              If you want to buy records, read content and listen all whilst
+              sharing your own digs and thoughts, then here is the place.
+            </p>
+          </div>
 
-  <div className={styles.quickLinks}>
-    <div className={styles.linkItem}>
-      <h4>Share Music</h4>
-      <p>Post the gems you&apos;ve found, and hear what others are spinning.</p>
-    </div>
-    <div className={styles.linkItem}>
-      <h4>Buy Records</h4>
-      <p>Discover rare, independent, and dance-floor-ready vinyl.</p>
-    </div>
-    <div className={styles.linkItem}>
-      <h4>Read Content</h4>
-      <p>Dive into stories, artist features, and collector tips.</p>
-    </div>
-    <div className={styles.linkItem}>
-      <h4>Join the Community</h4>
-      <p>Connect with diggers, DJs, and collectors just like you.</p>
-    </div>
-  </div>
-</div>
-
+          <div className={styles.quickLinks}>
+            <div className={styles.linkItem}>
+              <h4>Share Music</h4>
+              <p>
+                Post the gems you&apos;ve found, and hear what others are
+                spinning.
+              </p>
+            </div>
+            <div className={styles.linkItem}>
+              <h4>Buy Records</h4>
+              <p>Discover rare, independent, and dance-floor-ready vinyl.</p>
+            </div>
+            <div className={styles.linkItem}>
+              <h4>Read Content</h4>
+              <p>Dive into stories, artist features, and collector tips.</p>
+            </div>
+            <div className={styles.linkItem}>
+              <h4>Join the Community</h4>
+              <p>Connect with diggers, DJs, and collectors just like you.</p>
+            </div>
+          </div>
+        </div>
 
         <BannerCarousel />
         <section>
           <div className={styles.subHeadingContainer}>
-            <h1 className={styles.subheading}>
-              Latest Records
-            </h1>{" "}
+            <h1 className={styles.subheading}>Latest Records</h1>{" "}
           </div>
           <Slideshow />
         </section>
-  
+
         <TrackOfTheDay />
         <GetOnThis />
-        <br/>
+        <br />
         <LatestArticle />
       </main>
     </>

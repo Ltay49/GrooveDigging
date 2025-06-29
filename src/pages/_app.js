@@ -1,5 +1,4 @@
-// pages/_app.js
-import '@/styles/globals.css';
+import '@/styles/globals.css'; // or your global CSS path
 import { Space_Grotesk } from 'next/font/google';
 
 const spaceGrotesk = Space_Grotesk({
