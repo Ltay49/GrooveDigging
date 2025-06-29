@@ -11,31 +11,18 @@ import GetOnThis from "./components/GetOnThis";
 import { useEffect, useState } from "react";
 
 const title = "GROOVE DIGGING";
-const imageNamesR = ["two", "four"];
-const toSlug = (text) =>
-  text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)+/g, "");
 
 export default function Home() {
-
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 1024
-  );
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const updateDevice = () => setIsMobile(window.innerWidth < 650);
+    updateDevice(); // Initial check
+    window.addEventListener("resize", updateDevice);
+    return () => window.removeEventListener("resize", updateDevice);
   }, []);
 
-  const [hasMounted, setHasMounted] = useState(false);
-  useEffect(() => setHasMounted(true), []);
-
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 650;
-
-  const word = isMobile ? "YOOOU" : "YOOOOOOU";
+  const word = isMobile ? "YOOOOU" : "YOOOOOOU";
 
   return (
     <>
@@ -50,14 +37,8 @@ export default function Home() {
         <link rel="canonical" href="https://www.groovedigging.com/" />
 
         {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Groove Digging | Vinyl Records, Music Blogs & Sharing"
-        />
-        <meta
-          property="og:description"
-          content="Explore vinyl records, read unique music blogs, and share tracks with a passionate community."
-        />
+        <meta property="og:title" content="Groove Digging | Vinyl Records, Music Blogs & Sharing" />
+        <meta property="og:description" content="Explore vinyl records, read unique music blogs, and share tracks with a passionate community." />
         <meta property="og:image" content="/logo.png" />
         <meta property="og:url" content="https://www.groovedigging.com/" />
         <meta property="og:type" content="website" />
@@ -65,10 +46,7 @@ export default function Home() {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Groove Digging" />
-        <meta
-          name="twitter:description"
-          content="Buy vinyl, read blogs, share your groove."
-        />
+        <meta name="twitter:description" content="Buy vinyl, read blogs, share your groove." />
         <meta name="twitter:image" content="/logo.png" />
 
         {/* Structured Data */}
@@ -109,100 +87,63 @@ export default function Home() {
           </h1>
           <nav className={styles.nav}>
             <ul className={styles.navList}>
-              <li>
-                <Link href="/records">Shop</Link>
-              </li>
-              <li>
-                <Link href="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link href="/music">Listen</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
+              <li><Link href="/records">Shop</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/music">Listen</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </nav>
         </header>
 
         <section className={styles.banner}>
+          {/* First Banner Image */}
           <div className={styles.imageWrapper}>
-          <Image
-          className={styles.bannerDiana}
-          src="/cover.png"
-          alt="Rare funk vinyl cover"
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          quality={75}
-          priority
-        />
+            <Image
+              className={styles.bannerDiana}
+              src="/cover.png"
+              alt="Rare funk vinyl cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={75}
+              priority
+            />
             <div className={styles.overlay}>
-              {hasMounted && (
-                <span className={styles.youBottom}>
-                  {(isMobile ? "YOOOOU" : "YOOOOOOU")
-                    .split("")
-                    .map((char, i) => (
-                      <span
-                        key={i}
-                        className={styles.youLetter}
-                        style={{
-                          fontSize: `${
-                            isMobile ? 3 + i * 0.5 : 5 + i * 0.5
-                          }rem`,
-                        }}
-                      >
-                        {char}
-                      </span>
-                    ))}
-                </span>
-              )}
+              <span className={styles.youBottom}>
+                {word.split("").map((char, i) => (
+                  <span key={i} className={styles.youLetter}>{char}</span>
+                ))}
+              </span>
               <span className={styles.digB}>DIG</span>
               <span className={styles.itB}>IT?</span>
             </div>
           </div>
 
+          {/* Second Banner Image */}
           <div className={styles.imageWrapper}>
-            <div className={styles.imageWrapper}>
-              <Image
-                className={styles.bannerDiana}
-                src="/cover1.png"
-                alt="Classic soul record cover"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={75}
-                loading="lazy"
-              />
-            </div>
-
+            <Image
+              className={styles.bannerDiana}
+              src="/cover1.png"
+              alt="Classic soul record cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={75}
+              loading="lazy"
+            />
             <div className={styles.overlay}>
               <h1>
                 <span className={styles.can}>CAN</span>
-                {hasMounted && (
-                  <span className={styles.you}>
-                    {(isMobile ? "YOOOOU" : "YOOOOOOU")
-                      .split("")
-                      .map((char, i) => (
-                        <span
-                          key={i}
-                          className={styles.youLetter}
-                          style={{
-                            fontSize: `${
-                              isMobile ? 3 + i * 0.5 : 5 + i * 0.5
-                            }rem`,
-                          }}
-                        >
-                          {char}
-                        </span>
-                      ))}
-                  </span>
-                )}
+                <span className={styles.you}>
+                  {word.split("").map((char, i) => (
+                    <span key={i} className={styles.youLetter}>{char}</span>
+                  ))}
+                </span>
                 <span className={styles.dig}>DIG</span>
                 <span className={styles.it}>IT?</span>
               </h1>
             </div>
           </div>
         </section>
-        {/* <BannerSlide /> */}
+
         <div className={styles.layoutWrapper}>
           <div className={styles.introContainer}>
             <p>
@@ -227,10 +168,7 @@ export default function Home() {
           <div className={styles.quickLinks}>
             <div className={styles.linkItem}>
               <h4>Share Music</h4>
-              <p>
-                Post the gems you&apos;ve found, and hear what others are
-                spinning.
-              </p>
+              <p>Post the gems you&apos;ve found, and hear what others are spinning.</p>
             </div>
             <div className={styles.linkItem}>
               <h4>Buy Records</h4>
@@ -250,7 +188,7 @@ export default function Home() {
         <BannerCarousel />
         <section>
           <div className={styles.subHeadingContainer}>
-            <h1 className={styles.subheading}>Latest Records</h1>{" "}
+            <h1 className={styles.subheading}>Latest Records</h1>
           </div>
           <Slideshow />
         </section>
