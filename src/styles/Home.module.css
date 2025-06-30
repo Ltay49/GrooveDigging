@@ -585,20 +585,20 @@
     .letterSubH{
         font-size: 30px;
     }
-    .bannerDiana {
-      width: 100vw; /* make it bigger than screen */
-      height: auto;
-      object-fit: cover;
-      display: block;
-      max-width: none;
-    }
-  
     .imageWrapper {
-      overflow: hidden;
-      width: 100vw;
-      height: 200px;
-      position: relative;
-    }
+        position: relative;
+        width: 100vw;
+        height: 200px;
+        overflow: hidden;
+      }
+      
+      .bannerDiana {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
   
     .banner {
       flex-direction: column;
@@ -624,7 +624,6 @@
         display: none;
       }
       .digB{
-        display: block;
         display: block;
         position: absolute;
         color: yellow;
@@ -687,8 +686,8 @@
     .subheading {
         margin-top: 1rem;
         text-align: left;
-        max-width: 500px;
-        width: 500px;
+        max-width: 90vw;
+        width: 100%;
         font-size: 25px;
         border-radius: 0px;
         z-index: 10;
