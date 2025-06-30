@@ -49,7 +49,7 @@ function LatestArticle() {
             />
           </div>
           <div className={styles.content}>
-            <h3 className={styles.title}>{article.title}</h3>
+            <h2 className={styles.title}>{article.title}</h2>
             <p className={styles.body}>{article.body}</p>
             <small className={styles.meta}>
               {article.author} • {article.date}
