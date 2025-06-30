@@ -47,33 +47,29 @@ export default function Home() {
   
   <link rel="canonical" href="https://www.groovedigging.com/" />
   
-  {/* Preconnect to Spotify & fonts for faster loading */}
   <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
   <link rel="preload" href="/logo.png" as="image" />
   
-  {/* Open Graph */}
   <meta property="og:title" content="Groove Digging | Vinyl Records, Music Blogs & Sharing" />
   <meta
     property="og:description"
     content="Explore vinyl records, read unique music blogs, and share tracks with a passionate community."
   />
-  <meta property="og:image" content="https://www.groovedigging.com/logo.png" />
-  <meta property="og:url" content="https://www.groovedigging.com/" />
+  <meta property="og:image" content="https://groovedigging.netlify.app/logo.png" />
+  <meta property="og:url" content="https://groovedigging.netlify.app/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   
-  {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Groove Digging" />
   <meta
     name="twitter:description"
     content="Buy vinyl, read blogs, share your groove."
   />
-  <meta name="twitter:image" content="https://www.groovedigging.com/logo.png" />
+  <meta name="twitter:image" content="https://groovedigging.netlify.app/logo.png" />
   <meta name="twitter:site" content="@groovedigging" />
   
-  {/* Structured Data */}
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
@@ -81,8 +77,8 @@ export default function Home() {
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "Groove Digging",
-        url: "https://www.groovedigging.com",
-        logo: "https://www.groovedigging.com/logo.png",
+        url: "https://groovedigging.netlify.app",
+        logo: "https://groovedigging.netlify.app/logo.png",
         sameAs: [
           "https://twitter.com/groovedigging",
           "https://instagram.com/groovedigging",

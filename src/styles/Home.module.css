@@ -527,7 +527,56 @@
         height: auto;
     }
   }
+  @media (max-width: 950px) {
+.title{
+    display: none;
+}
+  
+.nav {
+    z-index: 10;
+    width: 80vw;
+    border-radius: 10px;
+    margin-right: 6rem;
+    margin-bottom: 1.5rem;
+    /* Pushes nav to the right side */
+}
+.can {
+    position: absolute;
+    color: #da1414;
+    left: 1rem;
+    top: 7rem;
+    transform: rotate(0deg);
+    font-size: 4rem;
+}
 
+.you {
+    position: absolute;
+    color: white;
+    top: 5.5rem;
+    left: 1rem;
+    transform: rotate(0deg);
+    z-index: 100;
+    font-size: 4rem;
+}
+
+.dig {
+    position: absolute;
+    color: yellow;
+    bottom: 8rem;
+    left: 1rem;
+    transform: rotate(0deg);
+    font-size: 4rem;
+}
+
+.it {
+    position: absolute;
+    color: yellow;
+    bottom: 8rem;
+    left: 9rem;
+    transform: rotate(0deg);
+    font-size: 4rem;
+}
+  }
 
   @media (max-width: 650px) {
   .can {
@@ -627,7 +676,7 @@
         display: block;
         position: absolute;
         color: yellow;
-        top:1rem;
+        top:0rem;
         left: 1rem;
         transform: rotate(0deg);
         font-size: 4rem;
@@ -636,7 +685,7 @@
         display: block;
         position: absolute;
         color: yellow;
-        top:1rem;
+        top:0rem;
         left: 9rem;
         transform: rotate(0deg);
         font-size: 4rem;

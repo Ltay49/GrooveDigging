@@ -6,4 +6,4 @@ Disallow: /signup/
 
 Allow: /
 
-Sitemap: https://www.groovedigging.com/sitemap.xml
+Sitemap: https://groovedigging.netlify.app

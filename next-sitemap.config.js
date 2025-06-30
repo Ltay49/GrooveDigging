@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://www.groovedigging.com',
+    siteUrl: 'https://groovedigging.netlify.app',
     generateRobotsTxt: false,
     sitemapSize: 7000,
 
