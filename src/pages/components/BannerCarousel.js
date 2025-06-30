@@ -65,6 +65,7 @@ export default function Banner() {
                 alt={album.alt}
                 width={300}
                 height={300}
+                sizes="(max-width: 768px) 100vw, 300px" // 👈 Add this
                 className={`${styles.albumImage} ${
                   activeIndex === index ? styles.active : ""
                 }`}
@@ -80,8 +81,9 @@ export default function Banner() {
                 alt={album.alt}
                 width={300}
                 height={300}
+                sizes="(max-width: 768px) 100vw, 300px" // 👈 Add this
                 className={`${styles.albumImage} ${
-                  activeIndex === index + midpoint ? styles.active : ""
+                  activeIndex === index ? styles.active : ""
                 }`}
               />
             </div>
