@@ -120,7 +120,7 @@ color:goldenrod;
 
 
 .image {
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .arrow {
