@@ -129,7 +129,7 @@ export default function Home() {
           <div className={styles.imageWrapper}>
           <Image
           className={styles.bannerDiana}
-          src="/cover.png"
+          src="/cover.webp"
           alt="Rare funk vinyl cover"
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -165,7 +165,7 @@ export default function Home() {
             <div className={styles.imageWrapper}>
               <Image
                 className={styles.bannerDiana}
-                src="/cover1.png"
+                src="/cover1.webp"
                 alt="Classic soul record cover"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

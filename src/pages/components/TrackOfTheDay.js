@@ -5,7 +5,7 @@ const tracks = [
   {
     title: "Chameleon",
     artist: "Herbie Hancock",
-    albumCover: "/one.jpeg",
+    albumCover: "/one.webp",
     date: "2025-06-25",
     spotifyUrl: "https://open.spotify.com/track/yourtrackid1",
     tags: [

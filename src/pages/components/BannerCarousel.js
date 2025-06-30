@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/BannerCarousel.module.css";
 
 const albumCovers = [
-  { src: "/war.jpeg", alt: "War" },
-  { src: "/prince.jpeg", alt: "Prince" },
-  { src: "/otis.jpeg", alt: "Otis" },
-  { src: "/db.jpeg", alt: "David Bowie" },
-  { src: "/two.jpeg", alt: "Bowie 2" },
-  { src: "/four.jpeg", alt: "Bowie 3" },
+  { src: "/war.webp", alt: "War" },
+  { src: "/prince.webp", alt: "Prince" },
+  { src: "/otis.webp", alt: "Otis" },
+  { src: "/db.webp", alt: "David Bowie" },
+  { src: "/two.webp", alt: "Bowie 2" },
+  { src: "/four.webp", alt: "Bowie 3" },
 ];
 
 export default function Banner() {
@@ -81,6 +81,7 @@ export default function Banner() {
                 alt={album.alt}
                 width={350}
                 height={350}
+                sizes="(max-width: 768px) 100vw, 350px"
                 className={`${styles.albumImage} ${
                   activeIndex === index + midpoint ? styles.active : ""
                 }`}

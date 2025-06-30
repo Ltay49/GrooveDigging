@@ -4,7 +4,7 @@ import styles from "../../styles/Slideshow.module.css";
 import Head from "next/head";
 import Link from "next/link";
 
-const images = ["/one.jpeg", "/two.jpeg", "/three.jpeg", "/four.jpeg"];
+const images = ["/one.webp", "/two.webp", "/three.webp", "/four.webp"];
 
 const toSlug = (text) =>
   text

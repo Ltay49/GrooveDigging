@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/getOnThis.module.css";
 
 const albumCovers = [
-  { src: "/war.jpeg", alt: "War" },
-  { src: "/prince.jpeg", alt: "Prince" },
-  { src: "/otis.jpeg", alt: "Otis" },
-  { src: "/db.jpeg", alt: "David Bowie" },
+  { src: "/war.webp", alt: "War" },
+  { src: "/prince.webp", alt: "Prince" },
+  { src: "/otis.webp", alt: "Otis" },
+  { src: "/db.webp", alt: "David Bowie" },
 ];
 
 export default function Banner() {
