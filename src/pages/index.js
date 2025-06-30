@@ -226,22 +226,22 @@ export default function Home() {
 
           <div className={styles.quickLinks}>
             <div className={styles.linkItem}>
-              <h3>Share Music</h3>
+              <h2>Share Music</h2>
               <p>
                 Post the gems you&apos;ve found, and hear what others are
                 spinning.
               </p>
             </div>
             <div className={styles.linkItem}>
-              <h3>Buy Records</h3>
+              <h2>Buy Records</h2>
               <p>Discover rare, independent, and dance-floor-ready vinyl.</p>
             </div>
             <div className={styles.linkItem}>
-              <h3>Read Content</h3>
+              <h2>Read Content</h2>
               <p>Dive into stories, artist features, and collector tips.</p>
             </div>
             <div className={styles.linkItem}>
-              <h3>Join the Community</h3>
+              <h2>Join the Community</h2>
               <p>Connect with diggers, DJs, and collectors just like you.</p>
             </div>
           </div>
