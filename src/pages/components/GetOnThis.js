@@ -30,26 +30,26 @@ export default function Banner() {
 
   return (
     <div className={styles.bannerWrapper}>
-<div className={styles.lightUpContainer}>
-<div className={styles.row}>
-    <span className={styles.l1}>&apos;ERE</span>
-  </div>
-  <div className={styles.row}>
-    <span className={styles.l2}>GET</span>
-  </div>
+      <div className={styles.lightUpContainer}>
+        <div className={styles.row}>
+          <span className={styles.l1}>&apos;ERE</span>
+        </div>
+        <div className={styles.row}>
+          <span className={styles.l2}>GET</span>
+        </div>
 
-  <div className={styles.row}>
-    <span className={styles.l3}>ON</span>
-  </div>
+        <div className={styles.row}>
+          <span className={styles.l3}>ON</span>
+        </div>
 
-  <div className={styles.row}>
-    <span className={styles.l4}>THIS</span>
-  </div>
-</div>
+        <div className={styles.row}>
+          <span className={styles.l4}>THIS</span>
+        </div>
+      </div>
       <div className={styles.albumGridWrapper}>
-      <a href="/articles" className={styles.viewAllLink}>
-  View All Articles →
-</a>
+        <a href="/articles" className={styles.viewAllLink}>
+          View All Articles →
+        </a>
         <div className={styles.albumRow}>
           {firstRow.map((album, index) => (
             <div key={index} className={styles.albumWrap}>
@@ -58,6 +58,8 @@ export default function Banner() {
                 alt={album.alt}
                 width={300}
                 height={300}
+                quality={70}
+                sizes="(max-width: 768px) 100vw, 300px" // 👈 Add this
                 className={`${styles.albumImage} ${
                   activeIndex === index ? styles.active : ""
                 }`}
@@ -73,6 +75,8 @@ export default function Banner() {
                 alt={album.alt}
                 width={300}
                 height={300}
+                quality={70}
+                sizes="(max-width: 768px) 100vw, 300px" // 👈 Add this
                 className={`${styles.albumImage} ${
                   activeIndex === index + midpoint ? styles.active : ""
                 }`}
