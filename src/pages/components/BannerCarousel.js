@@ -65,6 +65,7 @@ export default function Banner() {
                 alt={album.alt}
                 width={350}
                 height={350}
+                quality={70}
                 sizes="(max-width: 768px) 100vw, 300px" // 👈 Add this
                 className={`${styles.albumImage} ${
                   activeIndex === index ? styles.active : ""

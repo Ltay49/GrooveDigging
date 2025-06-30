@@ -132,8 +132,9 @@ export default function Home() {
           src="/cover.webp"
           alt="Rare funk vinyl cover"
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, 400px"
           quality={75}
+          style={{ objectFit: "cover" }}
           priority
         />
             <div className={styles.overlay}>
@@ -168,7 +169,7 @@ export default function Home() {
                 src="/cover1.webp"
                 alt="Classic soul record cover"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 400px"
                 quality={75}
                 loading="lazy"
               />
