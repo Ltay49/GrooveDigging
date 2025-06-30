@@ -32,56 +32,66 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Groove Digging | Vinyl Records, Music Blogs &amp; Sharing</title>
-        <meta
-          name="description"
-          content="Groove Digging is your destination for curated vinyl records, music blogs, and community sharing. Discover rare finds and underground favorites."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.groovedigging.com/" />
+<Head>
+  <title>Groove Digging | Vinyl Records, Music Blogs & Sharing</title>
+  
+  <meta
+    name="description"
+    content="Groove Digging: Curated vinyl records, music blogs, and community sharing. Discover rare funk, disco, jazz, soul & more. Join a passionate music-loving community."
+  />
+  
+  <meta name="keywords" content="vinyl records, music blogs, funk vinyl, disco records, jazz funk, rare vinyl, music community, vinyl shop, record collecting" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  
+  <link rel="canonical" href="https://www.groovedigging.com/" />
+  
+  {/* Preconnect to Spotify & fonts for faster loading */}
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+  <link rel="preload" href="/logo.png" as="image" />
+  
+  {/* Open Graph */}
+  <meta property="og:title" content="Groove Digging | Vinyl Records, Music Blogs & Sharing" />
+  <meta
+    property="og:description"
+    content="Explore vinyl records, read unique music blogs, and share tracks with a passionate community."
+  />
+  <meta property="og:image" content="https://www.groovedigging.com/logo.png" />
+  <meta property="og:url" content="https://www.groovedigging.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Groove Digging" />
+  <meta
+    name="twitter:description"
+    content="Buy vinyl, read blogs, share your groove."
+  />
+  <meta name="twitter:image" content="https://www.groovedigging.com/logo.png" />
+  <meta name="twitter:site" content="@groovedigging" />
+  
+  {/* Structured Data */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Groove Digging",
+        url: "https://www.groovedigging.com",
+        logo: "https://www.groovedigging.com/logo.png",
+        sameAs: [
+          "https://twitter.com/groovedigging",
+          "https://instagram.com/groovedigging",
+        ],
+      }),
+    }}
+  />
+</Head>
 
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Groove Digging | Vinyl Records, Music Blogs & Sharing"
-        />
-        <meta
-          property="og:description"
-          content="Explore vinyl records, read unique music blogs, and share tracks with a passionate community."
-        />
-        <meta property="og:image" content="/logo.png" />
-        <meta property="og:url" content="https://www.groovedigging.com/" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Groove Digging" />
-        <meta
-          name="twitter:description"
-          content="Buy vinyl, read blogs, share your groove."
-        />
-        <meta name="twitter:image" content="/logo.png" />
-
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Groove Digging",
-              url: "https://www.groovedigging.com",
-              logo: "https://www.groovedigging.com/logo.png",
-              sameAs: [
-                "https://twitter.com/groovedigging",
-                "https://instagram.com/groovedigging",
-              ],
-            }),
-          }}
-        />
-      </Head>
 
       <main className={styles.main}>
         <header className={styles.headerRow}>
