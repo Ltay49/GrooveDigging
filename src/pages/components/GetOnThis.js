@@ -56,10 +56,10 @@ export default function Banner() {
               <Image
                 src={album.src}
                 alt={album.alt}
-                width={300}
-                height={300}
+                width={350}
+                height={350}
                 quality={70}
-                sizes="(max-width: 768px) 100vw, 300px" // 👈 Add this
+                sizes="(max-width: 768px) 100vw, 350px" // 👈 Add this
                 className={`${styles.albumImage} ${
                   activeIndex === index ? styles.active : ""
                 }`}
@@ -73,10 +73,10 @@ export default function Banner() {
               <Image
                 src={album.src}
                 alt={album.alt}
-                width={300}
-                height={300}
+                width={350}
+                height={350}
                 quality={70}
-                sizes="(max-width: 768px) 100vw, 300px" // 👈 Add this
+                sizes="(max-width: 768px) 100vw, 350px" // 👈 Add this
                 className={`${styles.albumImage} ${
                   activeIndex === index + midpoint ? styles.active : ""
                 }`}

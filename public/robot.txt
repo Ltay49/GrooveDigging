@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
+
+Allow: /
+
+Sitemap: https://www.groovedigging.com/sitemap.xml

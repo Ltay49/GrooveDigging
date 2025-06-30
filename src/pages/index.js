@@ -11,12 +11,7 @@ import GetOnThis from "./components/GetOnThis";
 import { useEffect, useState } from "react";
 
 const title = "GROOVE DIGGING";
-const imageNamesR = ["two", "four"];
-const toSlug = (text) =>
-  text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)+/g, "");
+
 
 export default function Home() {
 
@@ -34,8 +29,6 @@ export default function Home() {
   useEffect(() => setHasMounted(true), []);
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 650;
-
-  const word = isMobile ? "YOOOU" : "YOOOOOOU";
 
   return (
     <>

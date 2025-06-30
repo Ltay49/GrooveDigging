@@ -5,6 +5,7 @@ const tracks = [
   {
     title: "Chameleon",
     artist: "Herbie Hancock",
+    album: "Chameleon",
     albumCover: "/one.webp",
     date: "2025-06-25",
     spotifyUrl: "https://open.spotify.com/track/yourtrackid1",
@@ -20,18 +21,6 @@ const tracks = [
   },
 ];
 
-// Helper to get "Today", "Yesterday", or date string
-function formatDate(dateString) {
-  const today = new Date();
-  const date = new Date(dateString);
-  const diffTime = today - date;
-  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-  if (diffDays === 0) return "Today";
-  if (diffDays === 1) return "Yesterday";
-  return date.toLocaleDateString();
-}
-
 // Pick the latest track by date (or customize logic as needed)
 const getCurrentTrack = () => {
   // Sort descending by date, get first
@@ -46,17 +35,17 @@ export default function TrackOfTheDay() {
 
   return (
     <section className={styles.trackContainer}>
-      <h1 className={styles.subheading}>
-        Dig Of The Week
-      </h1>{" "}
+      <h1 className={styles.subheading}>Dig Of The Week</h1>{" "}
       <div className={styles.mainContent}>
         <article className={styles.textBox}>
-          <h2>Title: <span>{currentTrack.title}</span></h2>
+          <h2>
+            Title: <span>{currentTrack.title}</span>
+          </h2>
           <h2>
             Artist: <span>{currentTrack.artist}</span>
           </h2>
           <h2>
-            Album: <span>Chameleon</span>
+            Album: <span>{currentTrack.album}</span>
           </h2>
           <p className={styles.hash} aria-label="Tags">
             {currentTrack.tags.join(" ")}
