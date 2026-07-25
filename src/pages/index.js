@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Header from "./components/Header";
 import Slideshow from "./components/Slideshow";
 import LatestArticle from "./components/latestArticle";
 import TrackOfTheDay from "./components/TrackOfTheDay";
@@ -9,8 +9,6 @@ import BannerCarousel from "./components/BannerCarousel";
 import GetOnThis from "./components/GetOnThis";
 
 import { useEffect, useState } from "react";
-
-const title = "GROOVE DIGGING";
 
 
 export default function Home() {
@@ -90,39 +88,7 @@ export default function Home() {
 
 
       <main className={styles.main}>
-        <header className={styles.headerRow}>
-          <Image
-            src="/logo.png"
-            alt="Groove Digging Logo"
-            width={80}
-            height={80}
-            className={styles.logo}
-            priority
-          />
-          <h1 className={styles.title}>
-            {title.split("").map((char, i) => (
-              <span key={i} className={styles.letter}>
-                {char === " " ? "\u00A0" : char}
-              </span>
-            ))}
-          </h1>
-          <nav className={styles.nav}>
-            <ul className={styles.navList}>
-              <li>
-                <Link href="/records">Shop</Link>
-              </li>
-              <li>
-                <Link href="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link href="/music">Listen</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <Header />
 
         <section className={styles.banner}>
           <div className={styles.imageWrapper}>

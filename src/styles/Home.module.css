@@ -278,6 +278,15 @@
     margin-bottom: 0rem;
 }
 
+.brandLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Logo image style with rotation + scaling animation */
 /* @keyframes rotateScale {
     0% {

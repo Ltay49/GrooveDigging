@@ -1,0 +1,65 @@
+.main {
+  max-width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.badge {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #da1414;
+  border: 2px solid #da1414;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 420px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.homeLink {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: white;
+  background-color: #da1414;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.homeLink:hover {
+  background-color: #0070f3;
+}
+
+@media (max-width: 650px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+}
